@@ -1,5 +1,5 @@
 # programming-fundamentals
-Programming fundamentals. Material useful for learning python, start coding and learn how to solve logically a real world problem.
+Programming fundamentals. Material useful for learning Python, start coding and learn how to solve logically real world problems.
 
 Exercises performed during the course of 'Programming Fundamentals' at the University La Sapienza.
 

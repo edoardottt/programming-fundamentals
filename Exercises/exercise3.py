@@ -3,6 +3,8 @@
 Created on Wed Oct  9 09:55:42 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 #Write a function that take as input two integers and a string.

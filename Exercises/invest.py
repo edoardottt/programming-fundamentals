@@ -2,7 +2,9 @@
 """
 Created on Wed Oct  9 10:13:10 2019
 
-@author: edoardott
+@author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 def invest(capital,interest,years):

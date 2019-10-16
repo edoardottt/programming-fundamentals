@@ -3,6 +3,8 @@
 Created on Wed Oct  9 09:52:21 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 #Write a function that take as input the male number and the female number entering in disco,

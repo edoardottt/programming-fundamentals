@@ -1,8 +1,12 @@
 # programming-fundamentals
 Programming fundamentals. 
+
 Material useful for learning Python, start coding and learn how to solve logically real world problems.
+
 Using Python 3.7.x and Spyder IDE
+
 Exercises performed during the course of 'Programming Fundamentals' at the University La Sapienza held by Prof. Sterbini, Monti and Spognardi.
+
 The course corcerned about:
 
       Introduction to programming using the Python language. 

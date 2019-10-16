@@ -4,6 +4,8 @@
 Created on Wed Oct  9 16:34:28 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 def estrai_pari_lista2(l):

@@ -2,7 +2,9 @@
 """
 Created on Mon Oct 14 09:48:24 2019
 
-@author: edoardott
+@author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 # Write a function that take as input a list. the function have to delete the 

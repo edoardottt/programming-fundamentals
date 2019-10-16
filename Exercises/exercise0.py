@@ -3,6 +3,8 @@
 Created on Wed Oct  9 09:31:58 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 #Write a function that take as input a product's cost and the discount percentage. 

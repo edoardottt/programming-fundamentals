@@ -3,6 +3,8 @@
 Created on Wed Oct  9 10:04:08 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 #Write a function 'invest' that take as input a capital, an annual interest and the years number and it

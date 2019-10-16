@@ -3,6 +3,8 @@
 Created on Mon Oct 14 09:38:03 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 l = [1,2,3,4,5,6,7,8,9] #l list definition

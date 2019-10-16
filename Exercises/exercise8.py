@@ -4,6 +4,8 @@
 Created on Wed Oct  9 16:21:02 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 '''

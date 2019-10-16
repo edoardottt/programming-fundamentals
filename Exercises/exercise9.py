@@ -4,6 +4,8 @@
 Created on Wed Oct  9 14:17:16 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 def prendi_numeri():
     '''

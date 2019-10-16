@@ -3,6 +3,8 @@
 Created on Mon Oct 14 09:45:16 2019
 
 @author: edoardottt
+https://www.edoardoottavianelli.it
+https://www.github.com/edoardottt
 """
 
 # We mainly use two ways to itering over a list

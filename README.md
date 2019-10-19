@@ -1,7 +1,7 @@
 # programming-fundamentals
-Programming fundamentals. 
+Programming fundamentals.
 
-Material useful for learning Python, start coding and learn how to solve logically real world problems.
+Useful material for learning Python, start coding and learn how to solve logically real world problems.
 
 Using Python 3.7.x and Spyder IDE
 

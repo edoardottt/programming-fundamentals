@@ -1,4 +1,4 @@
-# programming-fundamentals
+# programming-fundamentals🧠
 Programming fundamentals.
 
 Useful material for learning Python, start coding and learn how to solve logically real world problems.

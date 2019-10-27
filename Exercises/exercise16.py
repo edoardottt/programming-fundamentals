@@ -7,8 +7,8 @@ https://www.edoardoottavianelli.it
 https://www.github.com/edoardottt
 """
 
-# Write a function that take as input a list. the function have to delete the 
-# integer from the list and returns the number of elements deleted.
+#Write a function that take as input a list. the function have to delete the 
+#integer from the list and returns the number of elements deleted.
 
 def delete_integer(l):
     counter = 0

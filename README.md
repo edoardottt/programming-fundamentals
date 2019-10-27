@@ -26,9 +26,9 @@ The course corcerned about:
 DOWNLOAD 📡
 -------------------------------------------------
 
-GIT command on prompt: git -clone https://github.com/edoardottt/programming-fundamentals.git
+GIT command on prompt: git -clone "https://github.com/edoardottt/programming-fundamentals.git"
 
-Download by Browser on: https://github.com/edoardottt/programming-fundamentals
+Download by Browser on: "https://github.com/edoardottt/programming-fundamentals"
 
 --------------------------
 If you liked it drop a :star:

@@ -31,6 +31,6 @@ def foo(s):
     diz = {}
     for item in end:
         diz[item] = [i for i in s.split() if i[-1]==item]
-    for k,v in diz.items():
+    for v in diz.values():
         v.sort()
     return diz

@@ -15,6 +15,6 @@ This function returns the strings in a list but with all strings with uppercase.
 '''
 l = ['aNaNas','cocco','Banana','SUSINA']
 def print_list_uppercase(l):
-    for i in range(len(l)):
-        print(l[i].upper())
+    for i in l:
+        print(i.upper())
 print_list_uppercase(l)

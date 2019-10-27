@@ -3,7 +3,7 @@ Programming fundamentals.
 
 Useful material for learning Python, start coding and learn how to solve logically real world problems.
 
-Using Python 3.7.x and Spyder IDE
+[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 
 Exercises performed during the course of 'Programming Fundamentals' at the University La Sapienza held by Prof. Sterbini, Monti and Spognardi.
 

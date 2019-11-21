@@ -29,7 +29,7 @@ DOWNLOAD 📡
 
 GIT command on prompt: $ git -clone https://github.com/edoardottt/programming-fundamentals.git
 
-Download by Browser clicking [here](https://github.com/edoardottt/programming-fundamentals)
+Download by Browser clicking [here](https://github.com/edoardottt/programming-fundamentals.git)
 
 --------------------------
 If you liked it drop a :star:

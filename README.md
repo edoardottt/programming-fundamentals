@@ -6,7 +6,7 @@ Useful material for learning Python, start coding and learn how to solve logical
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f34580339dbb4cf7ab0daa85b6c98009)](https://www.codacy.com/manual/edoardottt/programming-fundamentals?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=edoardottt/programming-fundamentals&amp;utm_campaign=Badge_Grade)
 
-Exercises performed during the course of 'Programming Fundamentals' at the University La Sapienza held by Prof. Sterbini, Monti and Spognardi.
+Exercises performed during the course of 'Programming Fundamentals' at the University La Sapienza held by Prof. Sterbini, Prof. Monti and Prof. Spognardi.
 
 The course corcerned about:
 

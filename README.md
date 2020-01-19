@@ -7,7 +7,7 @@
 
 Exercises performed during the course 'Programming Fundamentals' held by Prof. Sterbini, Prof. Monti and Prof. Spognardi at  University La Sapienza of Rome.
 
-(Here the reference to official website)[https://q2a.di.uniroma1.it/assets/eserciziario-python/script/]
+[Here the reference to official website](https://q2a.di.uniroma1.it/assets/eserciziario-python/script/)
 
 The course corcerned about:
 

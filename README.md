@@ -9,7 +9,7 @@ Exercises performed during the course 'Programming Fundamentals' held by Prof. S
 
 The workbook(programming-fundamentals/WorkBook) is MY implementation of that directory.
 COPYRIGHT of the WorkBook [Here the reference to official website](https://q2a.di.uniroma1.it/assets/eserciziario-python/script/)
-=========
+
 Copyright (C) 2019- Andrea Sterbini <sterbini@di.uniroma1.it>, 
                     Angelo Monti <monti@di.uniroma1.it>, 
                     Matteo Neri <matteo2794@outlook.com>

@@ -21,6 +21,8 @@ All programs and files contained in that directory([THIS](https://q2a.di.uniroma
 
 **The workbook(programming-fundamentals/WorkBook) is MY implementation of that directory.**
 
+If you want to translate it from italian to english just send me a message :)
+
 The course corcerned about:
 
       - Introduction to programming using the Python language

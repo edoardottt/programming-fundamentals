@@ -25,18 +25,18 @@ If you want to translate it from italian to english just send me a message :)
 
 The course corcerned about:
 
-      - Introduction to programming using the Python language
-      - Data types
-      - Variables
-      - Assignments
-      - Control structures
-      - Functions
-      - Classes
-      - Modules and Input / Output
-      - Data structures: vectors, strings, lists and dictionaries
-      - Design and development of programs through procedural, recursive and object-oriented programming
-      - Python libraries for graphics, file management, word processing / html and Internet access
-      - Debugging and program testing
+- Introduction to programming using the Python language
+- Data types
+- Variables
+- Assignments
+- Control structures
+- Functions
+- Classes
+- Modules and Input / Output
+- Data structures: vectors, strings, lists and dictionaries
+- Design and development of programs through procedural, recursive and object-oriented programming
+- Python libraries for graphics, file management, word processing / html and Internet access
+- Debugging and program testing
 
 -------------------------------------------------
 DOWNLOAD 📡

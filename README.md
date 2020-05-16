@@ -5,7 +5,11 @@
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f34580339dbb4cf7ab0daa85b6c98009)](https://www.codacy.com/manual/edoardottt/programming-fundamentals?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=edoardottt/programming-fundamentals&amp;utm_campaign=Badge_Grade)
 
-![logo](https://github.com/edoardottt/programming-fundamentals/blob/master/Images/1.png)
+
+
+<p align="center">
+  <img src="https://github.com/edoardottt/programming-fundamentals/blob/master/Images/1.png">
+</p>
 
 Exercises performed during the course 'Programming Fundamentals' held by Prof. Sterbini, Prof. Monti and Prof. Spognardi at  University La Sapienza of Rome.
 
@@ -25,7 +29,7 @@ All programs and files contained in that directory([THIS](https://q2a.di.uniroma
 
 If you want to translate it from italian to english just send me a message :)
 
-The course corcerned about:
+**The course corcerned about:**
 
 - Introduction to programming using the Python language
 - Data types
@@ -55,5 +59,5 @@ If you liked it drop a :star:
 https://www.edoardoottavianelli.it for contact me.
 
 
-      Edoardo Ottavianelli ©
+                                                            Edoardo Ottavianelli ©
 

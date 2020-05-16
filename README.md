@@ -29,7 +29,7 @@ All programs and files contained in that directory([THIS](https://q2a.di.uniroma
 
 If you want to translate it from italian to english just send me a message :)
 
-The course corcerned about:
+**The course corcerned about:**
 
 - Introduction to programming using the Python language
 - Data types
@@ -59,5 +59,5 @@ If you liked it drop a :star:
 https://www.edoardoottavianelli.it for contact me.
 
 
-      Edoardo Ottavianelli ©
+                                                            Edoardo Ottavianelli ©
 

@@ -1,4 +1,3 @@
-
 def es76(parola):
     if not parola:
         return []

@@ -7,7 +7,7 @@ def es71(dir, minimo, massimo, prof=0):
     for f in os.listdir(dir):
         fn = "{}/{}".format(dir, f)
         if os.path.isdir(fn):
-            diz = es71(fn, minimo, massimo, prof+1)
+            diz = es71(fn, minimo, massimo, prof + 1)
             for k, v in diz.items():
                 if k not in profs or v > profs[k]:
                     profs[k] = v

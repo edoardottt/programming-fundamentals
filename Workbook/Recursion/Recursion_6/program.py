@@ -18,35 +18,39 @@ def es69(dirs, profondita, estensioni):
     Tests: date alcune directories contenenti file con estensioni diverse a diverse profondita', si chiama la funzione e si controlla che i file contenuti nelle directories esistano/non esistano a seconda del caso (senza usare una soluzione ricorsiva ma testando direttamente i path dei files relativi alla dir iniziale)
     Test: che la funzione sia ricorsiva
     """
-    lista = recursion(dirs,profondita,estensioni,[],0)
-    lista.append((dirs,0))
+    lista = recursion(dirs, profondita, estensioni, [], 0)
+    lista.append((dirs, 0))
     tot = 0
     el = 0
     for elem in lista:
-        if elem[1]<=profondita:
+        if elem[1] <= profondita:
             for item in os.listdir(elem[0]):
-                if os.path.isfile(elem[0]+'/'+item):
-                    tot+=1
-                    if elem[1]==profondita:
+                if os.path.isfile(elem[0] + "/" + item):
+                    tot += 1
+                    if elem[1] == profondita:
                         for est in estensioni:
                             lenn = len(est)
-                            if item[-lenn:]==est:
-                                el+=1
-                                os.remove(elem[0]+'/'+item)
+                            if item[-lenn:] == est:
+                                el += 1
+                                os.remove(elem[0] + "/" + item)
     return tot - el
-                            
-def recursion(d,p,c,l,pro):
-    if pro==p: return []
+
+
+def recursion(d, p, c, l, pro):
+    if pro == p:
+        return []
     if os.path.isdir(d):
-        if len(os.listdir(d))==0:
+        if len(os.listdir(d)) == 0:
             return []
         else:
             for elem in os.listdir(d):
-                path = d+'/'+elem
+                path = d + "/" + elem
                 if os.path.isdir(path):
-                    l.extend([(path,pro+1)])
-                recursion(path,p,c,l,pro+1)
-    else: return []
+                    l.extend([(path, pro + 1)])
+                recursion(path, p, c, l, pro + 1)
+    else:
+        return []
     return l
-            
-es69('t2', 3, ['jpg', 'png'])
+
+
+es69("t2", 3, ["jpg", "png"])

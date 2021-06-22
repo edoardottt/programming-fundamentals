@@ -1,5 +1,6 @@
 import os
 
+
 def es71(dirr, minimo, massimo):
     """
     Si definisca la funzione  ricorsiva (o che usa una vostra funzione ricorsiva) es71(dir, minimo, massimo)
@@ -13,27 +14,32 @@ def es71(dirr, minimo, massimo):
             controllare che il risultato sia il dizionario corretto
     Test:   che la funzione sia ricorsiva
     """
-    lista = recursion(dirr,minimo,massimo,0,[])
+    lista = recursion(dirr, minimo, massimo, 0, [])
     lista = list(set(lista))
-    lista = [(os.path.basename(item[0]),item[1]) for item in lista]
+    lista = [(os.path.basename(item[0]), item[1]) for item in lista]
     diz = {}
     for elem in lista:
-        if not elem[0] in lista: diz[elem[0]] = elem[1]
-        else: 
+        if not elem[0] in lista:
+            diz[elem[0]] = elem[1]
+        else:
             val = diz[elem[0]]
             if elem[1] > val:
                 diz[elem[0]] = val
     return diz
-    
-def recursion(d,mi,ma,pro,l):
+
+
+def recursion(d, mi, ma, pro, l):
     if os.path.isfile(d):
-        if mi<=os.stat(d).st_size and os.stat(d).st_size<=ma:
-            return [(d,pro)]
+        if mi <= os.stat(d).st_size and os.stat(d).st_size <= ma:
+            return [(d, pro)]
     elif os.path.isdir(d):
         for elem in os.listdir(d):
-            if os.path.isdir(d+'/'+elem): c = 1
-            else: c = 0
-            l.extend(recursion(d+'/'+elem,mi,ma,pro+c,l))
+            if os.path.isdir(d + "/" + elem):
+                c = 1
+            else:
+                c = 0
+            l.extend(recursion(d + "/" + elem, mi, ma, pro + c, l))
     return l
 
-es71('t4',0,40)
+
+es71("t4", 0, 40)

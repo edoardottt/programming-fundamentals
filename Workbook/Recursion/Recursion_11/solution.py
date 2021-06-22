@@ -1,4 +1,3 @@
-
 def es79(lista):
     a = b = 0
     ins = set()

@@ -21,12 +21,12 @@ def es70(dirs, estensioni, parole):
             contare alcune parole (in mixed-case) e controllare il dizionario risultante
     Test:   che la funzione sia ricorsiva
     """
-    lista = recursion(dirs,[])
+    lista = recursion(dirs, [])
     utili = []
     ins = set()
     for elem in lista:
         for est in estensioni:
-            if elem[-len(est):]==est:
+            if elem[-len(est) :] == est:
                 ins.add(elem)
     tutti = set(lista)
     utili = list(tutti.difference(ins))
@@ -36,35 +36,21 @@ def es70(dirs, estensioni, parole):
             text = f.read()
         for par in parole:
             if par.lower() in text.lower():
-                if par.lower() not in diz: diz[par.lower()] = 1
-                else: diz[par.lower()]+=1
+                if par.lower() not in diz:
+                    diz[par.lower()] = 1
+                else:
+                    diz[par.lower()] += 1
     return diz
 
-def recursion(d,l):
+
+def recursion(d, l):
     if os.path.isfile(d):
         l.append(d)
     elif os.path.isdir(d):
         for elem in os.listdir(d):
-            path = d+'/'+elem
-            recursion(path,l)
+            path = d + "/" + elem
+            recursion(path, l)
     return l
 
-es70('t3', ['txt', 'testo'], ['PaperIno', 'MINNIE', 'EdI'])
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+es70("t3", ["txt", "testo"], ["PaperIno", "MINNIE", "EdI"])

@@ -1,6 +1,7 @@
 import os
 import os.path
 
+
 def es68(dirs, estensioni):
     """
     Si definisca la funzione ricorsiva (o che usa una vostra funzione ricorsiva) es68(dir, estensioni),
@@ -19,21 +20,20 @@ def es68(dirs, estensioni):
     diz = {}
     for elem in estensioni:
         diz[elem] = 0
-    diz = rec(dirs,estensioni,diz)
+    diz = rec(dirs, estensioni, diz)
     result = {}
     for k in diz.keys():
-        if diz[k]!=0:
+        if diz[k] != 0:
             result[k] = diz[k]
     return result
-    
-    
-    
-def rec(dirs,est,diz):
+
+
+def rec(dirs, est, diz):
     if os.path.isfile(dirs):
         for es in est:
-            if dirs[-len(es):]==es:
-                diz[es]+=1
+            if dirs[-len(es) :] == es:
+                diz[es] += 1
     elif os.path.isdir(dirs):
         for elem in os.listdir(dirs):
-            rec(dirs+'/'+elem,est,diz)
+            rec(dirs + "/" + elem, est, diz)
     return diz

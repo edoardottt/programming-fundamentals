@@ -6,14 +6,14 @@ def es67(path):
     minimi = {}
     massimi = {}
     minmassimi(path, minimi, massimi, 0)
-    return {k: massimi[k]-minimi[k] for k in minimi}
+    return {k: massimi[k] - minimi[k] for k in minimi}
 
 
 def minmassimi(path, m, M, prof):
     for fn in os.listdir(path):
-        filename = path + '/' + fn
+        filename = path + "/" + fn
         if os.path.isdir(filename):
-            minmassimi(filename, m, M, prof+1)
+            minmassimi(filename, m, M, prof + 1)
         else:
             ext = fn[-3:]
             m[ext] = min(m.get(ext, prof), prof)

@@ -8,7 +8,7 @@ def es69(dir, profondita, estensioni):
         fn = "{}/{}".format(dir, f)
         if profondita > 0:
             if os.path.isdir(fn):
-                count += es69(fn, profondita-1, estensioni)
+                count += es69(fn, profondita - 1, estensioni)
             else:
                 count += 1
         else:

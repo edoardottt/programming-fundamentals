@@ -6,7 +6,7 @@ def es73(dir, htmlFile):
     """
     Si definisca la funzione  ricorsiva (o che usa una vostra funzione ricorsiva) es73(dir, htmlfile) che, data una directory,
     ne legge la struttura e costruisce ricorsivamente l'albero dei nodi my_html.HTMLNode
-	di un documento html da salvare in un file.
+        di un documento html da salvare in un file.
     Argomenti:
         dir:      percorso della directory radice da scandire
         htmlFile: percorso del file html da scrivere

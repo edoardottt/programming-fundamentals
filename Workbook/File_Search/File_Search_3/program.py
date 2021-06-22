@@ -1,5 +1,6 @@
 import os
 
+
 def es71(dirs, minimo, massimo):
     """
     Si definisca la funzione  ricorsiva (o che usa una vostra funzione ricorsiva) es71(dir, minimo, massimo)
@@ -13,29 +14,37 @@ def es71(dirs, minimo, massimo):
             controllare che il risultato sia il dizionario corretto
     Test:   che la funzione sia ricorsiva
     """
-    diz = rec(dirs,minimo,massimo,{},0)
+    diz = rec(dirs, minimo, massimo, {}, 0)
     result = {}
-    for k,v in diz.items():
-        if len(v)>1: result[k]=sorted(v,reverse=True)[0]
-        else: result[k] = v
+    for k, v in diz.items():
+        if len(v) > 1:
+            result[k] = sorted(v, reverse=True)[0]
+        else:
+            result[k] = v
     return result
-    
-def rec(d,mi,ma,diz,pro):
-    if os.path.basename(d)[0]=='.': return diz
+
+
+def rec(d, mi, ma, diz, pro):
+    if os.path.basename(d)[0] == ".":
+        return diz
     if os.path.isfile(d):
         dim = os.stat(d).st_size
-        if mi<=dim<=ma:
+        if mi <= dim <= ma:
             d = os.path.basename(d)
-            if d in diz: diz[d].append(pro)
-            else: diz[d] = [pro]
+            if d in diz:
+                diz[d].append(pro)
+            else:
+                diz[d] = [pro]
             return diz
     else:
         for elem in os.listdir(d):
-            path = d+'/'+elem
+            path = d + "/" + elem
             if os.path.isdir(path):
                 p = 1
-            else: p = 0
-            diz = rec(path,mi,ma,diz,pro+p)
+            else:
+                p = 0
+            diz = rec(path, mi, ma, diz, pro + p)
     return diz
 
-print(es71('t4', 0, 100))
+
+print(es71("t4", 0, 100))

@@ -1,5 +1,5 @@
 def es58(lista):
-    '''
+    """
     La funzione es58(lista) che presa
     - una lista di stringhe  i cui caratteri sono nell'insieme { 'N','E','S','O'},
     modifica distruttivamente la lista e restituisce il numero totale di caratteri presente
@@ -16,21 +16,22 @@ def es58(lista):
     iniziale alla cella destinazione individuata dalla stringa.
     Ad esempio per lista=[ 'NS', 'NEESS', 'NNOOO','NNEESSO'],
     al termine la funzione restituisce il numero 19 e la lista risulta essere [0,3,5,1]
-    '''
+    """
     res = 0
     for elem in lista:
         res = res + len(elem)
     ls = []
     for elem in lista:
-        n = elem.count('N')
-        s = elem.count('S')
-        e = elem.count('E')
-        o = elem.count('O')
-        ls.append(abs(n-s)+abs(e-o))
+        n = elem.count("N")
+        s = elem.count("S")
+        e = elem.count("E")
+        o = elem.count("O")
+        ls.append(abs(n - s) + abs(e - o))
     lista.clear()
     lista.extend(ls)
     return res
 
-lista=[ 'NS', 'NEESS', 'NNOOO','NNEESSO']
+
+lista = ["NS", "NEESS", "NNOOO", "NNEESSO"]
 print(es58(lista))
 print(lista)

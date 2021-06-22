@@ -8,8 +8,9 @@ https://edoardoottavianelli.it
 """
 # recursion example
 
+
 def find_max(l):
-    if len(l)==1:
+    if len(l) == 1:
         return l[0]
     remain = find_max(l[1:])
     if l[0] > remain:

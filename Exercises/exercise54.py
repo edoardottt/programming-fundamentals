@@ -9,6 +9,8 @@ https://edoardoottavianelli.it
 
 # recursion example 2
 
+
 def recursive_sum(l):
-    if len(l)==1: return l[0]
+    if len(l) == 1:
+        return l[0]
     return l[0] + recursive_sum(l[1:])

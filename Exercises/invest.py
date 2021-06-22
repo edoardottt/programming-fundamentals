@@ -7,5 +7,6 @@ https://www.edoardoottavianelli.it
 https://www.github.com/edoardottt
 """
 
-def invest(capital,interest,years):
-    return(int((capital * (1+interest/100)**years)))
+
+def invest(capital, interest, years):
+    return int((capital * (1 + interest / 100) ** years))

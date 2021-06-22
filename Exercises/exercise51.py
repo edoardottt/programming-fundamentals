@@ -10,11 +10,15 @@ https://edoardoottavianelli.it
 # Listing all .txt files in the input directory
 import os
 
+
 def list_txt_files(path):
     dirs = os.listdir(path)
-    if len(dirs)==0: pass
+    if len(dirs) == 0:
+        pass
     else:
         for filename in dirs:
             fullpath = f"{path}/{filename}"
-            if os.path.isdir(fullpath): list_txt_files(fullpath)
-            elif filename[-4:]=='.txt': print(fullpath)
+            if os.path.isdir(fullpath):
+                list_txt_files(fullpath)
+            elif filename[-4:] == ".txt":
+                print(fullpath)

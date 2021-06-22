@@ -10,6 +10,7 @@ https://edoardoottavianelli.it
 # Count recursively the files into the input directory
 import os
 
+
 def dimensioni_dir(path):
     dim = 0
     for name in os.listdir(path):

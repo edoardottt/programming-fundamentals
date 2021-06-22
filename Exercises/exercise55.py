@@ -7,8 +7,10 @@ Created on Wed Dec  4 14:58:11 2019
 https://edoardoottavianelli.it
 """
 
-# recursive factorial 
+# recursive factorial
+
 
 def recursive_factorial(n):
-    if n==1: return 1
-    return n * recursive_factorial(n-1)
+    if n == 1:
+        return 1
+    return n * recursive_factorial(n - 1)

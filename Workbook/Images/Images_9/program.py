@@ -1,5 +1,6 @@
 import immagini
 
+
 def es74(filePng, centro, spessore, colori, pngFileOut):
     """
     Si definisca la funzione  es9(filePng, centro, spessore, colori, pngFileOut) che,
@@ -16,4 +17,3 @@ def es74(filePng, centro, spessore, colori, pngFileOut):
     :param colori:      lista di colori da applicare in ordine dal centro fino all'anello piu' esterno
     :return:            lista col numero di pixel colorati di ciascun colore
     """
-    

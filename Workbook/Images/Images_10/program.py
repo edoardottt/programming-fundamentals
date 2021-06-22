@@ -1,5 +1,6 @@
 import immagini
 
+
 def es75(w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut):
     """
     Definite la funzione es75 che riceve come argomenti
@@ -22,4 +23,3 @@ def es75(w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut):
     Nota:   assumete che larghezzaPalazzo sia un valore pari
     Nota:   assumete che tutte le altezze siano minori o uguali dell'altezza h della immagine
     """
-    

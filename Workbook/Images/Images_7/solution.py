@@ -16,7 +16,7 @@ def es49(fimm1, fimm2, fimm3):
             if i % 2 == j % 2:
                 img3[i][j] = img1[i][j]
             a, b, c = img3[i][j]
-            if (a+b+c) % 2:
+            if (a + b + c) % 2:
                 count += 1
     immagini.save(img3, fimm3)
     return count

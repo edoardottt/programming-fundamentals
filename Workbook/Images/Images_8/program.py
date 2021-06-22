@@ -1,7 +1,8 @@
 import immagini
 
-def es65(k,lista1,fout):
-    '''
+
+def es65(k, lista1, fout):
+    """
     Un quadrato sul piano e' individuato dalla sestupla  di interi (x,y,l,r,g,b) dove
     (x,y) e' la coordinata del  vertice in alto a sinistra del quadrato,  l e' la lunghezza del lato
     e gli ultimi tre valori danno il suo colore (r,g,b).
@@ -20,33 +21,35 @@ def es65(k,lista1,fout):
     lista1=[(20,50,20,0,255,0),(30,60,20,255,0,0),(60,50,20,255,0,0),(70,60,20,0,255,0)]
     con es65(100,lista1,'prova1.png') si otterra' la figura nel file prova1.png
     e verra' restituito il valore 8600.
-    '''
-    base = [[(0,0,0) for _ in range(k)] for _ in range(k)]
+    """
+    base = [[(0, 0, 0) for _ in range(k)] for _ in range(k)]
     for q in lista1:
         x = q[1]
         y = q[0]
         l = q[2]
-        col = (q[3],q[4],q[5])
+        col = (q[3], q[4], q[5])
         maxcol = col
-        for i in range(x,x+l):
-            for j in range(y,y+l):
-                if i<k and j<k: 
-                    if maggiore(base[i][j],maxcol):
-                        maxcol = base[i][j]                                
-        for i in range(x,x+l):
-            for j in range(y,y+l):
-                if i<k and j<k: base[i][j] = maxcol
-    immagini.save(base,fout)
+        for i in range(x, x + l):
+            for j in range(y, y + l):
+                if i < k and j < k:
+                    if maggiore(base[i][j], maxcol):
+                        maxcol = base[i][j]
+        for i in range(x, x + l):
+            for j in range(y, y + l):
+                if i < k and j < k:
+                    base[i][j] = maxcol
+    immagini.save(base, fout)
     count = 0
     for i in range(len(base)):
         for j in range(len(base[0])):
-            if base[i][j]==(0,0,0):
-                count+=1
+            if base[i][j] == (0, 0, 0):
+                count += 1
     return count
 
-def maggiore(a,b):
-    ra,ga,ba = a
-    rb,gb,bb = b
-    if ra>rb or (ra==rb and ga > gb) or (ra==rb and ga==gb and ba>bb):
+
+def maggiore(a, b):
+    ra, ga, ba = a
+    rb, gb, bb = b
+    if ra > rb or (ra == rb and ga > gb) or (ra == rb and ga == gb and ba > bb):
         return True
     return False

@@ -28,8 +28,8 @@ def maxColore(img, q):
     lato = len(img)
     x, y, l, r, g, b = q
     c = (r, g, b)
-    for ny in range(y, y+l):
-        for nx in range(x, x+l):
+    for ny in range(y, y + l):
+        for nx in range(x, x + l):
             if nx < lato and ny < lato:
                 c = massimo(c, img[ny][nx])
     return tuple(c)
@@ -37,7 +37,7 @@ def maxColore(img, q):
 
 def disegna(img, x, y, l, c):
     lato = len(img)
-    for ny in range(y, y+l):
-        for nx in range(x, x+l):
+    for ny in range(y, y + l):
+        for nx in range(x, x + l):
             if nx < lato and ny < lato:
                 img[ny][nx] = c

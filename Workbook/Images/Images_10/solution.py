@@ -2,10 +2,14 @@ import immagini
 
 
 def es75(w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut):
-    return es75_interpretazione2(w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut)
+    return es75_interpretazione2(
+        w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut
+    )
 
 
-def es75_interpretazione1(w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut):
+def es75_interpretazione1(
+    w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut
+):
     # inserite qui il vostro codice
     blu = (0, 0, 255)
     img = [[blu for _ in range(w)] for _ in range(h)]
@@ -15,13 +19,13 @@ def es75_interpretazione1(w, h, listaColori, listaAltezze, larghezzaPalazzo, fil
 
     # prima possibile interpretazione delle parole "rettangoli equispaziati" (= con i centri equispaziati nella immagine)
     # i centri dei palazzi sono spaziati regolarmente nella immagine
-    step = w//(N+1)
+    step = w // (N + 1)
     # MA! se larghezzaPalazzo > step allora possono sbordare dalla immagine
-    start = step - larghezzaPalazzo//2
+    start = step - larghezzaPalazzo // 2
     end = start + larghezzaPalazzo
 
     for colore, altezza in zip(listaColori, listaAltezze):
-        rettangoli.append((start, end, h-altezza, h, colore))
+        rettangoli.append((start, end, h - altezza, h, colore))
         start += step
         end += step
     rettangoli.sort(key=lambda r: r[2])
@@ -36,7 +40,9 @@ def es75_interpretazione1(w, h, listaColori, listaAltezze, larghezzaPalazzo, fil
     return cambiati
 
 
-def es75_interpretazione2(w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut):
+def es75_interpretazione2(
+    w, h, listaColori, listaAltezze, larghezzaPalazzo, filePngOut
+):
     # inserite qui il vostro codice
     blu = (0, 0, 255)
     img = [[blu for _ in range(w)] for _ in range(h)]
@@ -50,10 +56,10 @@ def es75_interpretazione2(w, h, listaColori, listaAltezze, larghezzaPalazzo, fil
     start = 0
     end = larghezzaPalazzo
     # gli altri sono spaziati regolarmente (sono N-1 spazi)
-    step = (w-larghezzaPalazzo)//(N-1)
+    step = (w - larghezzaPalazzo) // (N - 1)
 
     for colore, altezza in zip(listaColori, listaAltezze):
-        rettangoli.append((start, end, h-altezza, h, colore))
+        rettangoli.append((start, end, h - altezza, h, colore))
         start += step
         end += step
     rettangoli.sort(key=lambda r: r[2])

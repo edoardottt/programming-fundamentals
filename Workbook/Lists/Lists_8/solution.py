@@ -1,4 +1,4 @@
-def es29(tabella1,tabella2,col):
+def es29(tabella1, tabella2, col):
     inizio = len(tabella1)
     valori = [riga[col] for riga in tabella1]
     for riga in tabella2:

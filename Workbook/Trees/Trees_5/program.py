@@ -1,7 +1,8 @@
 import albero
 
+
 def es14(tree, x):
-  '''
+    """
       Es 2: 6 punti
       Si definisca la funzione es14(tree,x) ricorsiva (o che fa uso di funzioni o metodi ricorsive/i) 
       che riceve come argomenti:
@@ -27,23 +28,32 @@ def es14(tree, x):
 
   Nell'albero ci sono 3 nodi con valore divisibile per 2+livello (sono i nodi a valore 3,4 e 5)
   cosi'  la funzione tornera' il valore 3.
-  '''
-  return rec(tree,x)
-  
-def rec(t,x):
-    if t.sx==None and t.dx==None: 
-        if t.valore%x==0: a = 1
-        else: a= 0
+  """
+    return rec(tree, x)
+
+
+def rec(t, x):
+    if t.sx == None and t.dx == None:
+        if t.valore % x == 0:
+            a = 1
+        else:
+            a = 0
         return a
-    elif t.sx==None:
-        if t.valore%x==0: a = 1
-        else: a= 0
-        return a + rec(t.dx,x+1)
-    elif t.dx==None:
-        if t.valore%x==0: a = 1
-        else: a= 0
-        return a + rec(t.sx,x+1)
+    elif t.sx == None:
+        if t.valore % x == 0:
+            a = 1
+        else:
+            a = 0
+        return a + rec(t.dx, x + 1)
+    elif t.dx == None:
+        if t.valore % x == 0:
+            a = 1
+        else:
+            a = 0
+        return a + rec(t.sx, x + 1)
     else:
-        if t.valore%x==0: a = 1
-        else: a= 0
-        return a + rec(t.sx,x+1) + rec(t.dx,x+1)
+        if t.valore % x == 0:
+            a = 1
+        else:
+            a = 0
+        return a + rec(t.sx, x + 1) + rec(t.dx, x + 1)

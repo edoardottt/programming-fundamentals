@@ -1,6 +1,8 @@
 import albero
+
+
 def es14(tree, x, count=0):
-  '''
+    """
       Es 2: 6 punti
       Si definisca la funzione es2(tree,x) ricorsiva (o che fa uso di funzioni o metodi ricorsive/i) 
       che riceve come argomenti:
@@ -26,11 +28,11 @@ def es14(tree, x, count=0):
 
   Nell'albero ci sono 3 nodi con valore divisibile per 2+livello (sono i nodi a valore 3,4 e 5)
   cosi'  la funzione tornera' il valore 3.
-  '''
-  if(tree.dx != None):
-    count = es14(tree.dx, x+1, count)
-  if(tree.sx != None):
-    count = es14(tree.sx, x+1, count)
-  if((tree.valore % x) == 0):
-    count+=1
-  return count
+  """
+    if tree.dx != None:
+        count = es14(tree.dx, x + 1, count)
+    if tree.sx != None:
+        count = es14(tree.sx, x + 1, count)
+    if (tree.valore % x) == 0:
+        count += 1
+    return count

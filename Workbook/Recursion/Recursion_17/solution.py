@@ -5,7 +5,7 @@ import os.path
 
 def es72(dir, jsonFile):
     dizio, massimo = esploraDir(dir, dir)
-    with open(jsonFile, mode='w', encoding='utf8') as f:
+    with open(jsonFile, mode="w", encoding="utf8") as f:
         json.dump({dir: dizio}, f)
     return massimo
 

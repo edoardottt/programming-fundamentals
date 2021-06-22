@@ -1,5 +1,6 @@
 import albero
 
+
 def es6(percorsi):
     lstPercorsi = list(percorsi)
     root = albero.AlberoBinario(lstPercorsi[0][-1:])
@@ -8,19 +9,18 @@ def es6(percorsi):
     return root
 
 
-
 def constructPath(root, pathStr):
-    if(pathStr == ''):
+    if pathStr == "":
         return root
     lastChar = pathStr[-1:]
-    if(lastChar > root.valore):
-        if(root.dx == None):
+    if lastChar > root.valore:
+        if root.dx is None:
             root.dx = albero.AlberoBinario(lastChar)
             constructPath(root.dx, pathStr[:-1])
         else:
             constructPath(root.dx, pathStr[:-1])
-    elif(lastChar < root.valore):
-        if(root.sx == None):
+    elif lastChar < root.valore:
+        if root.sx is None:
             root.sx = albero.AlberoBinario(lastChar)
             constructPath(root.sx, pathStr[:-1])
         else:

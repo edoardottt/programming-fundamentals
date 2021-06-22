@@ -1,14 +1,14 @@
-def es30(fname1,fname2,fname3):
-    '''
-    Create the function es30(fname1,fname2,fname3) that takes as input the paths 
+def es30(fname1, fname2, fname3):
+    """
+    Create the function es30(fname1,fname2,fname3) that takes as input the paths
     of three txt files.
-    The first file contains an encoded message where each character has been replaced 
+    The first file contains an encoded message where each character has been replaced
     by a three-digit character.
     All no-numeric chars have to be transferred as they are.
-    In the second file it's possible to retrieve the matches numbers-characters 
+    In the second file it's possible to retrieve the matches numbers-characters
     between numbers of text and the respective char.
-    More precisely this file is organizeb by rows, in each row there are a char 
-    and a three-digit integer that matches it into the separated txt file 
+    More precisely this file is organizeb by rows, in each row there are a char
+    and a three-digit integer that matches it into the separated txt file
     by at least one space.
     Different numbers can refer to the same char and not all the numbers that
     appears in fname1 necessarily have to be in decode-file.
@@ -24,55 +24,59 @@ def es30(fname1,fname2,fname3):
     the decoded text to be registered into file3 will be: 'tutt? a n?nna?'
     and the function returns the number 2.
     You can assume that the numeric chars always appear grouped by three.
-    '''
+    """
     encoded_text = extract_encoded_text(fname1)
     decoder_dict = build_decoder_dict(fname2)
     result = 0
-    decoded_text = ''
+    decoded_text = ""
     j = 0
     while j < len(encoded_text):
         aggiungi = True
-        if encoded_text[j] == '?':
-            decoded_text+='?'
+        if encoded_text[j] == "?":
+            decoded_text += "?"
         elif encoded_text[j].isalpha():
-            decoded_text+=encoded_text[j]
-        elif encoded_text[j] == ' ':
-            decoded_text+=' '
+            decoded_text += encoded_text[j]
+        elif encoded_text[j] == " ":
+            decoded_text += " "
         elif encoded_text[j].isnumeric():
-            value = encoded_text[j] + encoded_text[j+1] + encoded_text[j+2]
-            j+=3
+            value = encoded_text[j] + encoded_text[j + 1] + encoded_text[j + 2]
+            j += 3
             aggiungi = False
             if value in decoder_dict:
                 decoded_text += decoder_dict[value]
-            else: 
-                decoded_text+='?'
-                result +=1
-        else: decoded_text+=encoded_text[j]
-        if aggiungi: j+=1
-    decoded_text+=' '
+            else:
+                decoded_text += "?"
+                result += 1
+        else:
+            decoded_text += encoded_text[j]
+        if aggiungi:
+            j += 1
+    decoded_text += " "
     decoded_text = decoded_text[:-1]
     print(decoded_text)
-    with open(fname3,'w') as f:
+    with open(fname3, "w") as f:
         f.write(decoded_text)
     return result
+
 
 def extract_encoded_text(fname1):
     with open(fname1) as f:
         text = f.read()
     return text
 
+
 def build_decoder_dict(fname2):
     with open(fname2) as f:
         text = f.readlines()
     dict = {}
     for elem in text:
-        c=''
-        v=''
+        c = ""
+        v = ""
         for char in elem:
-            if char!='\n':
+            if char != "\n":
                 if char.isalpha():
                     c = char
                 elif char.isnumeric():
-                    v+=char
+                    v += char
         dict[v] = c
     return dict

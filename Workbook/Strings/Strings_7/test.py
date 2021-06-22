@@ -9,30 +9,45 @@ import program
 
 @ddt
 class Test(testlib.TestCase):
-
     def do_test(self, ls, c, expected, expectedLst):
-        '''Implementazione del test
-            - ls            : lista di strignhe
-            - c             : un carattere
-            - expected      : lista attesa
-            - expectedLst   : come deve essere modificata la lista
-        '''
-        with self.ignored_function('builtins.print'), \
-                self.forbidden_function('os.walk'), \
-                self.timer(2):
+        """Implementazione del test
+        - ls            : lista di strignhe
+        - c             : un carattere
+        - expected      : lista attesa
+        - expectedLst   : come deve essere modificata la lista
+        """
+        with self.ignored_function("builtins.print"), self.forbidden_function(
+            "os.walk"
+        ), self.timer(2):
             result = program.es51(ls, c)
         self.assertEqual(
-            ls, expectedLst, f"La lista in input deve diventare {expectedLst} invece che {ls}")
+            ls,
+            expectedLst,
+            f"La lista in input deve diventare {expectedLst} invece che {ls}",
+        )
         self.assertEqual(
-            result, expected, f"Il risultato deve essere {expected} invece che {result}")
+            result, expected, f"Il risultato deve essere {expected} invece che {result}"
+        )
 
     @data(
-        (['Angelo', 'Andrea', 'Fabio', 'Francesco',
-          'Lucio', 'Luca', 'Ugo'], 'a', 5, ['Lucio', 'Ugo']),
-        (['Angelo', 'Andrea', 'Fabio', 'Francesco', 'Lucio', 'Luca', 'Ugo'],
-         'G', 2, ['Andrea', 'Fabio', 'Francesco', 'Lucio', 'Luca']),
-        (['Angelo', 'Andrea', 'Fabio', 'Francesco', 'Lucio', 'Luca', 'Ugo'],
-         'f', 2, ['Angelo', 'Andrea', 'Lucio', 'Luca', 'Ugo'])
+        (
+            ["Angelo", "Andrea", "Fabio", "Francesco", "Lucio", "Luca", "Ugo"],
+            "a",
+            5,
+            ["Lucio", "Ugo"],
+        ),
+        (
+            ["Angelo", "Andrea", "Fabio", "Francesco", "Lucio", "Luca", "Ugo"],
+            "G",
+            2,
+            ["Andrea", "Fabio", "Francesco", "Lucio", "Luca"],
+        ),
+        (
+            ["Angelo", "Andrea", "Fabio", "Francesco", "Lucio", "Luca", "Ugo"],
+            "f",
+            2,
+            ["Angelo", "Andrea", "Lucio", "Luca", "Ugo"],
+        ),
     )
     @unpack
     def test(self, ls, c, expected, expectedLst):
@@ -40,5 +55,5 @@ class Test(testlib.TestCase):
 
 
 # I TEST VENGONO ESEGUITI SIA ESEGUENDO program.py che chiamando pytest nella directory
-if __name__ == '__main__':
+if __name__ == "__main__":
     Test.main()

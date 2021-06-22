@@ -1,4 +1,4 @@
-'''
+"""
     Es 11: 3 punti
 progettare la funzione es11(ftesto) che, preso in input 
 l'indirizzo di un file di testo restituisce un dizionario avente per chiavi delle stringhe 
@@ -23,37 +23,40 @@ Ad Esempio, per il file di testo f10.txt  la funzione restituisce  il dizionario
 'rt': ['otre', 'tre'], 
 'lp': ['piolo', 'polo']
 }
-'''
+"""
+
 
 def es11(ftesto):
     with open(ftesto) as f:
         words = f.readlines()
-    words = [elem.strip() for elem in words if len(elem)>1]
+    words = [elem.strip() for elem in words if len(elem) > 1]
     dict = {}
     for word in words:
         k = extract_word(word)
         if k not in dict:
             dict[k] = [word]
-        else: dict[k].append(word)
+        else:
+            dict[k].append(word)
     diz = {}
-    for k,v in dict.items():
+    for k, v in dict.items():
         lenghts = set()
         res = []
         for elem in v:
             lenghts.add(len(elem))
         for elem in list(reversed(sorted(lenghts))):
-            list_elem = [item for item in v if len(item)==elem]
+            list_elem = [item for item in v if len(item) == elem]
             intermediate = sorted(list_elem)
             res.extend(intermediate)
         diz[k] = res
     return diz
-    
+
+
 def extract_word(parola):
     result = []
     for elem in parola:
-        if elem not in 'aeiou':
+        if elem not in "aeiou":
             result.append(elem)
-    res = ''
+    res = ""
     for elem in sorted(result):
-        res+=elem
+        res += elem
     return res

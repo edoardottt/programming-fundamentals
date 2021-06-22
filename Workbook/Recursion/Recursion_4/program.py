@@ -1,4 +1,4 @@
-'''
+"""
     Es 9: 3 punti
     Si definisca la funzione es9(pathDir ) ricorsiva (o che fa uso di funzioni o 
     metodi ricorsive/i) che:
@@ -22,51 +22,40 @@
     Esempio: con es9('Informatica/Software') viene restituita la lista:
     [('SistemiOperativi', 287), ('Software', 10), ('BasiDati', 0)]
 
-'''
+"""
 
 import os
 
+
 def es9(pathDir):
-    diz = recursion(pathDir,{})
+    diz = recursion(pathDir, {})
     lista = []
-    for v in sorted(set(diz.values()),reverse=True):
+    for v in sorted(set(diz.values()), reverse=True):
         appoggio = []
         for k in sorted(diz.keys()):
-            if diz[k]==v:
-                appoggio.append((k,v))
+            if diz[k] == v:
+                appoggio.append((k, v))
         lista.extend(appoggio)
     return lista
-    
-    
-def recursion(p,diz):
-    if p[0]=='.': return 0
+
+
+def recursion(p, diz):
+    if p[0] == ".":
+        return 0
     if os.path.isfile(p):
-            if p[-3:]=='txt':
-                return os.path.getsize(p)
-            else: return 0
+        if p[-3:] == "txt":
+            return os.path.getsize(p)
+        else:
+            return 0
     elif os.path.isdir(p):
         diz[os.path.basename(p)] = 0
         for elem in os.listdir(p):
-            if elem[0]!='.':
-                if os.path.isdir(p + '/' + elem):
-                    diz = recursion(p+'/'+elem,diz)
-                elif os.path.isfile(p + '/' + elem):
-                    diz[os.path.basename(p)]+=recursion(p+'/'+elem,diz)
+            if elem[0] != ".":
+                if os.path.isdir(p + "/" + elem):
+                    diz = recursion(p + "/" + elem, diz)
+                elif os.path.isfile(p + "/" + elem):
+                    diz[os.path.basename(p)] += recursion(p + "/" + elem, diz)
     return diz
-        
-print(es9('Informatica'))
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+print(es9("Informatica"))

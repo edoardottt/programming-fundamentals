@@ -11,12 +11,11 @@ import program
 
 @ddt
 class Test(testlib.TestCase):
-
     def do_test(self, tree, expected):
-        '''Implementazione del test
-            - tree          : albero binario sotto forma di lista
-            - expected      : numero di nodi atteso
-        '''
+        """Implementazione del test
+        - tree          : albero binario sotto forma di lista
+        - expected      : numero di nodi atteso
+        """
         tree1 = albero.AlberoBinario.fromList(tree)
         tree2 = copy.deepcopy(tree1)
         try:
@@ -29,19 +28,44 @@ class Test(testlib.TestCase):
         finally:
             isrecursive.undecorate_module(program)
 
-        with self.ignored_function('builtins.print'), \
-                self.forbidden_function('os.walk'), \
-                self.timer(2):
+        with self.ignored_function("builtins.print"), self.forbidden_function(
+            "os.walk"
+        ), self.timer(2):
             result = program.es48(tree1)
         self.assertEqual(
-            result, expected, f"Il risultato deve essere {expected} invece che {result}")
+            result, expected, f"Il risultato deve essere {expected} invece che {result}"
+        )
 
     @data(
-        ([7, [1, [4, [5, [9, None, None], None], None], [
-         6, [2, None, [8, None, None]], None]], [3, None, None]], 2),
-        ([9, [2, [6, [5, None, None], [5, None, None]], [6, [5, None, None], [5, None, None]]],
-          [4, [6, [5, None, None], [5, None, None]], [6, [5, None, None], [5, None, None]]]], 7),
-        ([5, None, [1, [5, None, [1, [5, None, None], None]], None]], 0)
+        (
+            [
+                7,
+                [
+                    1,
+                    [4, [5, [9, None, None], None], None],
+                    [6, [2, None, [8, None, None]], None],
+                ],
+                [3, None, None],
+            ],
+            2,
+        ),
+        (
+            [
+                9,
+                [
+                    2,
+                    [6, [5, None, None], [5, None, None]],
+                    [6, [5, None, None], [5, None, None]],
+                ],
+                [
+                    4,
+                    [6, [5, None, None], [5, None, None]],
+                    [6, [5, None, None], [5, None, None]],
+                ],
+            ],
+            7,
+        ),
+        ([5, None, [1, [5, None, [1, [5, None, None], None]], None]], 0),
     )
     @unpack
     def test(self, tree, expected):
@@ -49,5 +73,5 @@ class Test(testlib.TestCase):
 
 
 # I TEST VENGONO ESEGUITI SIA ESEGUENDO program.py che chiamando pytest nella directory
-if __name__ == '__main__':
+if __name__ == "__main__":
     Test.main()

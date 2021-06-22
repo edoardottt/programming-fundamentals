@@ -1,6 +1,6 @@
 import albero
 
-'''
+"""
     Es 12: 3 punti
     Un albero si dice binario completo se tutti i suoi nodi interni hanno esattamente 2 
     figli e tutte le foglie si trovano allo stesso livello.
@@ -29,10 +29,9 @@ import albero
                                           |   |   |   |  |   |  |   |   
                                           1   2   3   4  5   6  7   8   
                                                                    
-    '''
+    """
 
 
 def es1(k):
     # inserisci qui il tuo codice
     pass
-    

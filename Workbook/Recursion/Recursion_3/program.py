@@ -1,6 +1,6 @@
 import albero
 
-'''
+"""
     Es 1: 3 punti
     Si definisca la funzione es7(tree,insieme,k ) ricorsiva (o che fa uso 
     di funzioni o metodi ricorsive/i) che:
@@ -29,23 +29,34 @@ import albero
            |     |                   |   |   |   |  |   |  |   |   
            3     1                   1   2   12  13 15  6  4   0   
                                                                    
-    '''
-def es7(tree,insieme,k):
-    return recursion(tree,insieme,k,0)
+    """
 
 
-def recursion(tree,insieme,k,summ):
-    if len(tree.f)==0:
+def es7(tree, insieme, k):
+    return recursion(tree, insieme, k, 0)
+
+
+def recursion(tree, insieme, k, summ):
+    if len(tree.f) == 0:
         return summ
     else:
         a = 0
         for elem in tree.f:
-            summ = recursion(elem,insieme,k,summ)
-            if elem.id in insieme: a+=1
-        if a==k: return summ +1
-        else: return summ
-            
-lista=[7,[[5,[[10,[[1,[]],[2,[]]]],[8,[[12,[]],[13,[]]]]]],[9,[[3,[[15,[]],[6,[]]]],
-        [1,[[4,[]],[0,[]]]]]]]]
+            summ = recursion(elem, insieme, k, summ)
+            if elem.id in insieme:
+                a += 1
+        if a == k:
+            return summ + 1
+        else:
+            return summ
+
+
+lista = [
+    7,
+    [
+        [5, [[10, [[1, []], [2, []]]], [8, [[12, []], [13, []]]]]],
+        [9, [[3, [[15, []], [6, []]]], [1, [[4, []], [0, []]]]]],
+    ],
+]
 tree = albero.fromLista(lista)
-print(es7(tree, {1,2,3,5,9}, 2))
+print(es7(tree, {1, 2, 3, 5, 9}, 2))

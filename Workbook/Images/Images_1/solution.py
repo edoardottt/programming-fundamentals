@@ -1,5 +1,6 @@
 import immagini
 
+
 def es42(fImageIn, fcolori, fImageOut):
     img = immagini.load(fImageIn)
     h = len(img)

@@ -1,6 +1,6 @@
 import immagini
 
-'''    
+"""    
     Es 12: 4 punti
     Progettare la  funzione es13(fimm,fimm1) che, 
     - riceve gli  indirizzi fimm e  fimm1 di due file .PNG. 
@@ -26,8 +26,10 @@ import immagini
       50) ecc. ecc. 
       Sull'immagine Fig1.png la funzione deve produrre il file RisFig1.png e restituire il numero ?
     Per caricare e salvare i file PNG si possono usare load e save della libreria immagini.
-    '''
-def es13(fimm,fimm1):
+    """
+
+
+def es13(fimm, fimm1):
     fimm = immagini.load(fimm)
     insieme = set()
     for i in range(len(fimm)):
@@ -36,12 +38,11 @@ def es13(fimm,fimm1):
     insieme = list(sorted(insieme))
     diz = {}
     for i in range(len(insieme)):
-        diz[insieme[i]] = insieme[(i//50)*50]
+        diz[insieme[i]] = insieme[(i // 50) * 50]
     res = set()
     for i in range(len(fimm)):
         for j in range(len(fimm[0])):
             fimm[i][j] = diz[fimm[i][j]]
             res.add(fimm[i][j])
-    immagini.save(fimm,fimm1)
+    immagini.save(fimm, fimm1)
     return len(res)
-    

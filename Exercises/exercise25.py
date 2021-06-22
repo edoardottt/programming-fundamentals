@@ -8,12 +8,43 @@ https://www.edoardoottavianelli.it
 https://www.github.com/edoardottt
 """
 
-'''
+"""
 Write a function that take as input a string and WITHOUT USING LOOPS returns 
 the set of characters that make the string.
-'''
-s = 'edoardo loves programming'
+"""
+s = "edoardo loves programming"
+
+
 def char_string(s):
-    alphabet = set(['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','w','y','z'])
-    string = set(s.replace('',' ').split())
+    alphabet = set(
+        [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "x",
+            "w",
+            "y",
+            "z",
+        ]
+    )
+    string = set(s.replace("", " ").split())
     return alphabet & string

@@ -7,11 +7,12 @@ https://www.edoardoottavianelli.it
 https://www.github.com/edoardottt
 """
 
-'''
+"""
 Write a function that take as input a dictionary and returns the inverted
 dict. So the keys of the result will have the values as keys, and as values
 the keys that have that values as values in input.
-'''
+"""
+
 
 def foo(d):
     diz = {}

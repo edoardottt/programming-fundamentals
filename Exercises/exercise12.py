@@ -9,12 +9,16 @@ https://www.github.com/edoardottt
 """
 
 
-'''
+"""
 This function returns the strings in a list but with all strings with uppercase.
 2nd version
-'''
-l = ['aNaNas','cocco','Banana','SUSINA']
+"""
+l = ["aNaNas", "cocco", "Banana", "SUSINA"]
+
+
 def print_list_uppercase(l):
     for i in l:
         print(i.upper())
+
+
 print_list_uppercase(l)

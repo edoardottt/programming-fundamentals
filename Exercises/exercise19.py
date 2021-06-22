@@ -8,10 +8,11 @@ https://www.edoardoottavianelli.it
 https://www.github.com/edoardottt
 """
 
-#Write a function that take as input a string with words separated by spaces and returns a list
+# Write a function that take as input a string with words separated by spaces and returns a list
 # containing the length of words
 
-s = 'hi my name is edoardottt'
+s = "hi my name is edoardottt"
+
 
 def count_words(s):
     l = s.split()
@@ -19,4 +20,6 @@ def count_words(s):
     for i in l:
         result += [len(i)]
     return result
+
+
 print(count_words(s))

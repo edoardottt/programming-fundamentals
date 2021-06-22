@@ -7,7 +7,7 @@ https://www.edoardoottavianelli.it
 https://www.github.com/edoardottt
 """
 
-'''
+"""
 Scrivere una funzione che prende una stringa contenente una serie di parole 
 separate da spazi e costruisce un dizionario in cui le chiavi sono le 
 ultime lettere delle parole della stringa e i valori ad esse associati 
@@ -24,13 +24,15 @@ that endwith that letter.
 The lists have to be sorted lexicographically.
 For example, for the input "in verità non mi par vero affatto" -->
 {'o':['affatto','vero'], 'n':['in','non'], 'à':['verità'], 'i':['mi'], 'r':['par']}
-'''
+"""
+
+
 def foo(s):
     end = [i[-1] for i in s.split()]
     end = set(end)
     diz = {}
     for item in end:
-        diz[item] = [i for i in s.split() if i[-1]==item]
+        diz[item] = [i for i in s.split() if i[-1] == item]
     for v in diz.values():
         v.sort()
     return diz

@@ -8,18 +8,20 @@ https://www.edoardoottavianelli.it
 https://www.github.com/edoardottt
 """
 
-#Write a function that take as input a list of integer and returns a list containing the 10-complement 
-#of those numbers
+# Write a function that take as input a list of integer and returns a list containing the 10-complement
+# of those numbers
+
 
 def complement_ten(l):
     result = []
     for i in range(len(l)):
-        result += [10**len(str(l[i]))-l[i]]
+        result += [10 ** len(str(l[i])) - l[i]]
     return result
 
-#without range
+
+# without range
 def complement_ten2(l):
     result = []
     for i in l:
-        result += [10**len(str(i))-i]
+        result += [10 ** len(str(i)) - i]
     return result

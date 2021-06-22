@@ -13,23 +13,11 @@
 
 Exercises performed during the course 'Programming Fundamentals' held by Prof. Sterbini, Prof. Monti and Prof. Spognardi at  University La Sapienza of Rome.
 
-
-**COPYRIGHT of the WorkBook** [Here the reference to official website](https://q2a.di.uniroma1.it/assets/eserciziario-python/script/)
-
-
-Copyright (C) 2019- Andrea Sterbini <sterbini@di.uniroma1.it>, 
-                    Angelo Monti <monti@di.uniroma1.it>, 
-                    Matteo Neri <matteo2794@outlook.com>
-                    
-
-All programs and files contained in that directory([THIS](https://q2a.di.uniroma1.it/assets/eserciziario-python/script/)) are released under lincence GPL v.3 
-(https://www.gnu.org/licenses/gpl-3.0.en.html)
-
-**The workbook(programming-fundamentals/WorkBook) is MY implementation of that directory.**
+**The workbook(programming-fundamentals/WorkBook) is MY implementation of the original problems.**
 
 If you want to translate it from italian to english just send me a message :)
 
-**The course corcerned about:**
+**The course concerned about:**
 
 - Introduction to programming using the Python language
 - Data types
@@ -44,20 +32,28 @@ If you want to translate it from italian to english just send me a message :)
 - Python libraries for graphics, file management, word processing / html and Internet access
 - Debugging and program testing
 
--------------------------------------------------
-DOWNLOAD 📡
--------------------------------------------------
 
-GIT command on prompt: $ git -clone https://github.com/edoardottt/programming-fundamentals.git
+Download 📡
+--------
 
-Download by Browser clicking [here](https://github.com/edoardottt/programming-fundamentals.git)
+- `git -clone https://github.com/edoardottt/programming-fundamentals.git`
 
---------------------------
+
+**COPYRIGHT of the WorkBook** [Here the reference to official website](https://q2a.di.uniroma1.it/assets/eserciziario-python/script/)
+
+
+Copyright (C) 2019- Andrea Sterbini <sterbini@di.uniroma1.it>, 
+                    Angelo Monti <monti@di.uniroma1.it>, 
+                    Matteo Neri <matteo2794@outlook.com>
+                    
+
+All programs and files contained in that directory([THIS](https://q2a.di.uniroma1.it/assets/eserciziario-python/script/)) are released under lincence GPL v.3 
+(https://www.gnu.org/licenses/gpl-3.0.en.html)
+
 If you liked it drop a :star:
---------------------------
+--------
 
 https://www.edoardoottavianelli.it for contact me.
 
-
-                                                            Edoardo Ottavianelli ©
+                                                            Edoardo Ottavianelli
 

@@ -1,16 +1,17 @@
 import os
 import os.path
 
+
 def es67(path):
     """
-    ATTENZIONE: e' VIETATO usare la funzione os.walk o altre funzioni di libreria che 
-    permettono di cercare tutti i file presenti in una directory. 
+    ATTENZIONE: e' VIETATO usare la funzione os.walk o altre funzioni di libreria che
+    permettono di cercare tutti i file presenti in una directory.
     (la directory la dovete esplorare voi)
 
     Si definisca la funzione ricorsiva (o che fa uso di vostre funzioni ricorsive) es67 che:
     - riceve come argomento un path del filesystem
     - esplora ricorsivamente la directory corrispondente e torna un dizionario.
-    Il dizionario ha come chiave le estensioni dei file trovati nella directory 
+    Il dizionario ha come chiave le estensioni dei file trovati nella directory
     (ovvero gli ultimi 3 caratteri del nome dei file, es: 'txt', 'pdf', 'png').
     Il valore associato a ciascuna chiave K e' la distanza (differenza delle profondita')
     tra il piu' profondo file che ha quella estensione e il meno profondo.
@@ -22,25 +23,31 @@ def es67(path):
         risultato contiene la coppia chiave: valore
         'txt' : 6
     """
-    d = rec(path,{},0)
+    d = rec(path, {}, 0)
     for elem in d:
         d[elem] = d[elem][1] - d[elem][0]
     return d
-    
-def rec(p,d,pro):
+
+
+def rec(p, d, pro):
     if os.path.isfile(p):
         est = p[-3:]
-        if est not in d: d[est] = (pro,pro)
-        else: 
-            mi,ma = d[est]
-            if pro>ma: d[est] = (mi,pro)
-            if pro<mi: d[est] = (pro,ma)
+        if est not in d:
+            d[est] = (pro, pro)
+        else:
+            mi, ma = d[est]
+            if pro > ma:
+                d[est] = (mi, pro)
+            if pro < mi:
+                d[est] = (pro, ma)
         return d
     elif os.path.isdir(p):
         for elem in os.listdir(p):
-            if os.path.basename(p)[0]=='.': continue
-            path = p+'/'+elem
+            if os.path.basename(p)[0] == ".":
+                continue
+            path = p + "/" + elem
             if os.path.isdir(path):
-                d = rec(path,d,pro+1)
-            else: d = rec(path,d,pro)
+                d = rec(path, d, pro + 1)
+            else:
+                d = rec(path, d, pro)
     return d

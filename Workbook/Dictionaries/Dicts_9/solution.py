@@ -15,7 +15,7 @@ def es37(listaDizionari):
     diz = {}
     for d in listaDizionari:
         for k, v in d.items():
-            if conta[k] >= N/2:
+            if conta[k] >= N / 2:
                 if k in diz:
                     diz[k] = diz[k].union(v)
                 else:

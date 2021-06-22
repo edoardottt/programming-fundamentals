@@ -6,7 +6,7 @@ def es35(dir1, parole):
     diz = {w: [0, 0] for w in parole}
     # scandisco la directory e prendo solo i file con estensione '.txt'
     for fn in os.listdir(dir1):
-        if not os.path.isdir(fn) and fn[-4:] == '.txt':
+        if not os.path.isdir(fn) and fn[-4:] == ".txt":
             with open(dir1 + "/" + fn) as f:
                 # estraggo le parole dal file, visto che sono separate da spazi/accapo/tab e' sufficiente usare split
                 words = f.read().split()

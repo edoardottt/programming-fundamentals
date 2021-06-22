@@ -1,5 +1,5 @@
 def es36(listaDizionari):
-    '''
+    """
     Si implementi la funzione es36(listaDizionari) che presi in input una lista di dizionari
     restituisce  un dizionario.
     I dizionari in input della listaDizionari  hanno come  chiave stringhe
@@ -14,7 +14,7 @@ def es36(listaDizionari):
     {'a':[5,1,2,3], 'b':[2],'d':[3]},
     {'a':[3,5], 'c':[4,1,2],'d':[4]}
     il dizionario restituito sara' {'a':[3,5],'d':[]}
-    '''
+    """
     d = {}
     k = set(listaDizionari[0].keys())
     for elem in listaDizionari:

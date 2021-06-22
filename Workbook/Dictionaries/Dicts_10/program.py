@@ -1,4 +1,4 @@
-''' 
+""" 
     Un modo comune di memorizzare tabelle e' come liste di dizionari. 
     Ogni riga della tabella corrisponde ad un dizionario le cui chiavi sono i nomi delle colonne della tabella.
     Questa collezione di dizionari e' poi memorizzata in una lista.
@@ -12,9 +12,11 @@
 puo' essere memorizzata come 
 [{'nome': 'Sofia', 'anno': 1973 ,'tel': 5553546},{'nome': 'Bruno', 'anno': 1981 ,'tel': 5558432}]
 
-'''
-def es29(tabella1,tabella2,col):
-    ''' 
+"""
+
+
+def es29(tabella1, tabella2, col):
+    """ 
     Si implementi la funzione es29(tabella1, tabella2, col) che prese in input
     - due tabelle: tabella1 e tabella2,  rappresentate tramite lista di dizionari
     ed aventi le stesse colonne
@@ -37,7 +39,7 @@ def es29(tabella1,tabella2,col):
     al termine di es29(tabella1, tabella2, 'C1') verra' restituito il numero 2 e la tabella1 risultera'
     [{'C1': 1, 'C2': 'x'},{'C1': 2, 'C2': 'a'},{'C1': 3, 'C2': 'a' ,},{'C1': 4, 'C2': 'a' },{'C1': 5, 'C2': 'a' },\
     {'C1': 6, 'C2': 'b' },{'C1': 7, 'C2': 'b' }]
-    '''
+    """
     values = []
     for elem in tabella1:
         values.append(elem[col])
@@ -47,16 +49,7 @@ def es29(tabella1,tabella2,col):
             add.append(elem)
     result = len(add)
     tabella1.extend(add)
-    c = sorted(tabella1,key = lambda x: x[col])
+    c = sorted(tabella1, key=lambda x: x[col])
     tabella1.clear()
     tabella1.extend(c)
     return result
-    
-    
-    
-    
-    
-    
-    
-    
-    

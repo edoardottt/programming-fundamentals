@@ -6,8 +6,10 @@ Created on Wed Nov 27 10:41:19 2019
 @author: angelo
 """
 
+
 def f():
-    return 'Ciccio'
+    return "Ciccio"
+
 
 q = f()
 print(f())

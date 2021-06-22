@@ -26,15 +26,16 @@ L'immagine presa come argomento DEVE RISULTARE MODIFICATA
 from immagini01 import *
 from immagini import load, save
 
+
 def quad(imm, x, y, lato, colore):
-    for i in range(x, x+lato):
-        for j in range(y,y+lato):
+    for i in range(x, x + lato):
+        for j in range(y, y + lato):
             imm[i][j] = colore
+
 
 def quad_vuoto(imm, x, y, lato, colore):
     for i in range(lato):
-        imm[x][y+i]=colore
-        imm[x+lato-1][y+i]=colore
-        imm[x+i][y]=colore
-        imm[x+i][y+lato-1]=colore
-
+        imm[x][y + i] = colore
+        imm[x + lato - 1][y + i] = colore
+        imm[x + i][y] = colore
+        imm[x + i][y + lato - 1] = colore

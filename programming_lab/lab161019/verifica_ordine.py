@@ -8,19 +8,22 @@ Scrivere una funzione che verifica se una lista è ordinata in modo crescente (<
 
 """
 
+
 def verifica_ordine(lista):
-    for i in range(len(lista)-1):
-        if lista[i] <= lista[i+1]:
+    for i in range(len(lista) - 1):
+        if lista[i] <= lista[i + 1]:
             continue
         else:
             return False
     return True
 
+
 def verifica_ordine2(lista):
-    for i in range(len(lista)-1):
-        if lista[i] > lista[i+1]:
+    for i in range(len(lista) - 1):
+        if lista[i] > lista[i + 1]:
             return False
     return True
+
 
 def verifica_ordine3(lista):
     a = lista[0]
@@ -30,22 +33,21 @@ def verifica_ordine3(lista):
         a = elemento
     return True
 
+
 def verifica_ordine4(lista):
     i = 0
-    while i < len(lista) -1 and lista[i] <= lista[i+1]:
+    while i < len(lista) - 1 and lista[i] <= lista[i + 1]:
         i += 1
-#    if i < len(lista) -1:
-#        return False
-#    return True
-    return False if i < (len(lista) -1) else True
+    #    if i < len(lista) -1:
+    #        return False
+    #    return True
+    return False if i < (len(lista) - 1) else True
+
 
 def verifica_ordine5(lista):
     i = 0
-    while i < len(lista) -1:
-        if lista[i] > lista[i+1]:
+    while i < len(lista) - 1:
+        if lista[i] > lista[i + 1]:
             return False
-        i=i+1
+        i = i + 1
     return True
-
-
-

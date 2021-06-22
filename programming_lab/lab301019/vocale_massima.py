@@ -14,12 +14,13 @@ Es: se il file contiene
  ritorna 'i'
 """
 
+
 def vocale_massima(nomefile):
     ripvoc = 0
-    voc =''
+    voc = ""
     with open(nomefile) as f:
         for line in f:
-            for v in 'aeiou':
+            for v in "aeiou":
                 cont = line.count(v)
                 if cont > ripvoc:
                     ripvoc = cont

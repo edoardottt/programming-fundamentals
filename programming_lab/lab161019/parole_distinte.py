@@ -10,9 +10,10 @@ Scrivere una funzione che prende una stringa di parole separate da spazi in ingr
 esempio: "ciao ciao se beccamo" {"ciao","se","beccamo"}
 """
 
+
 def parole_distinte(stringa):
     s = set()
-    stringa = stringa.replace("'"," ")
+    stringa = stringa.replace("'", " ")
     for parola in stringa.split():
         parola = parola.strip(",.!?;:'\"")
         s.add(parola)

@@ -11,6 +11,7 @@ es: conta_caratteri("pippo") ritorna il dizionario
 {'p':3, 'i':1, 'o':1}
 """
 
+
 def conta_caratteri(parola):
     d = dict()
     for carattere in parola:
@@ -20,12 +21,14 @@ def conta_caratteri(parola):
             d[carattere] += 1
     return d
 
+
 def conta_caratteri2(parola):
     d = dict()
     for carattere in parola:
         conta = d.get(carattere, 0)
-        d[carattere] = conta +1
+        d[carattere] = conta + 1
     return d
+
 
 def conta_caratteri3(parola):
     # Viene invocato un count per ogni carattere
@@ -34,6 +37,7 @@ def conta_caratteri3(parola):
     for carattere in parola:
         d[carattere] = parola.count(carattere)
     return d
+
 
 # test con Beowulf (292951 caratteri):
 #    %timeit conta_caratteri(a)

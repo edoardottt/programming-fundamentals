@@ -9,6 +9,7 @@ Scrivere una funzione che prende una stringa di parole separate da spazi e ritor
 es: "pippo re ciao asdrubale te" {2:2, 4:1, 5:1, 9:1}
 """
 
+
 def diz_lungh(s):
     diz = {}
     lista = s.split()
@@ -20,11 +21,9 @@ def diz_lungh(s):
             diz[lung_parola] = diz[lung_parola] + 1
     return diz
 
+
 def diz_lungh2(s):
     diz = {}
     for parola in s.split():
         diz[len(parola)] = diz.get(len(parola), 0) + 1
     return diz
-
-
-

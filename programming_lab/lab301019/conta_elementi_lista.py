@@ -11,11 +11,13 @@ restituisce
 [(1,1),(2,3),("b",1),("a",2),(2.0,4),("casa",2)]
 """
 
+
 def conta_elementi_lista(lista):
     diz = {}
     for elemento in lista:
         diz[elemento] = lista.count(elemento)
     return list(diz.items())
+
 
 def conta_elementi_lista2(lista):
     diz = {}
@@ -23,6 +25,7 @@ def conta_elementi_lista2(lista):
         if elemento not in diz:
             diz[elemento] = lista.count(elemento)
     return list(diz.items())
+
 
 def conta_elementi_lista3(lista):
     diz = {}
@@ -49,11 +52,11 @@ def conta_elementi_lista4(lista):
 
 
 def conta_elementi_lista5(lista):
-    diz = {(elemento, type(elemento)):0 for elemento in lista}
+    diz = {(elemento, type(elemento)): 0 for elemento in lista}
     for elemento in lista:
         t = elemento, type(elemento)
         diz[t] += 1
-    return [(tupla[0],diz[tupla]) for tupla in diz]
+    return [(tupla[0], diz[tupla]) for tupla in diz]
 
 
 def conta_elementi_lista6(lista):
@@ -65,9 +68,9 @@ def conta_elementi_lista6(lista):
             diz[elemento] = 1
     return list(diz.items())
 
+
 def conta_elementi_lista7(lista):
     diz = {}
     for elemento in lista:
         diz[elemento] = diz.get(elemento, 0) + 1
     return list(diz.items())
-

@@ -21,22 +21,18 @@ il dizionario risultante sarà:
     {'a':5, 'e':2, 'z':2, 's':1, 'o':1}
 """
 
+
 def frequenze_ripetute(fname):
     diz = {}
     with open(fname) as f:
         for riga in f:
-            ultimo = ''
-            riga=riga.replace(' ','')
+            ultimo = ""
+            riga = riga.replace(" ", "")
             for indice, carattere in enumerate(riga[:-1]):
-                if carattere == riga[indice+1]:
+                if carattere == riga[indice + 1]:
                     if carattere != ultimo:
-                        diz[carattere] = diz.get(carattere,0) + 1
+                        diz[carattere] = diz.get(carattere, 0) + 1
                         ultimo = carattere
                 else:
                     ultimo = carattere
     return diz
-
-
-
-
-

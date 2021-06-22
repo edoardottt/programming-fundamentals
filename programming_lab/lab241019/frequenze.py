@@ -11,17 +11,19 @@ es: "zuzzurello tutto il giorno"
 {'z':3, 'u':3, 'r':2, 'e':1, 'l':3, 't':3, 'o':4, 'i':2, 'n':1, 'g':1}
 """
 
+
 def frequenze(s):
     diz = {}
     for carattere in s:
         if carattere not in diz:
             diz[carattere] = 1
         else:
-            diz[carattere]+=1
-    for carattere in ' \n\t':
+            diz[carattere] += 1
+    for carattere in " \n\t":
         if carattere in diz:
             del diz[carattere]
     return diz
+
 
 def frequenze2(s):
     diz = {}
@@ -30,8 +32,9 @@ def frequenze2(s):
         if carattere not in diz:
             diz[carattere] = 1
         else:
-            diz[carattere]+=1
+            diz[carattere] += 1
     return diz
+
 
 def frequenze2bis(s):
     diz = {}
@@ -39,9 +42,9 @@ def frequenze2bis(s):
         if carattere not in diz:
             diz[carattere] = 1
         else:
-            diz[carattere]+=1
-    if ' ' in diz:
-        del diz[' ']
+            diz[carattere] += 1
+    if " " in diz:
+        del diz[" "]
     return diz
 
 
@@ -51,6 +54,7 @@ def frequenze3(s):
         if carattere != " ":
             diz[carattere] = s.count(carattere)
     return diz
+
 
 S = """
 The Project Gutenberg EBook of Ulysses, by James Joyce
@@ -33238,5 +33242,3 @@ including how to make donations to the Project Gutenberg Literary
 Archive Foundation, how to help produce our new eBooks, and how to
 subscribe to our email newsletter to hear about new eBooks.
 """
-
-

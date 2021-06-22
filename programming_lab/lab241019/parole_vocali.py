@@ -9,11 +9,12 @@ Scrivere una funzione che prende una stringa di parole separate da spazi e ritor
 es: "odio et amo" {'o':['odio','amo'], 'i':['odio'], 'e':['et'], 'a':['amo']}
 """
 
+
 def parole_vocali(s):
     diz = {}
     parole = s.split()
     for parola in parole:
-        for vocale in 'aeiou':
+        for vocale in "aeiou":
             if vocale in parola:
                 if vocale in diz:
                     diz[vocale].append(parola)
@@ -26,11 +27,10 @@ def parole_vocali2(s):
     diz = {}
     parole = s.split()
     for parola in parole:
-        for vocale in 'aeiou':
+        for vocale in "aeiou":
             if vocale in parola:
                 diz[vocale] = diz.get(vocale, []) + [parola]
     return diz
 
+
 parole_vocali("odio et amo aaaaaaaa")
-
-

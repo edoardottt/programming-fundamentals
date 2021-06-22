@@ -10,13 +10,15 @@ Scrivere una funzione da_stringa_a_stringa che prende in input una stringa conte
 esempio "oggi il sole splende per me", 2 : "il me"
 """
 
+
 def da_stringa_a_stringa(stringa, l):
     lista = stringa.split()
     lista_parole = []
     for parola in lista:
         if len(parola) == l:
             lista_parole.append(parola)
-    return ' '.join(lista_parole)
+    return " ".join(lista_parole)
+
 
 def da_stringa_a_stringa2(stringa, l):
     lista = stringa.split()
@@ -29,10 +31,11 @@ def da_stringa_a_stringa2(stringa, l):
                 nuova_stringa = nuova_stringa + " " + parola
     return nuova_stringa
 
+
 def da_stringa_a_stringa3(stringa, l):
     lista = stringa.split()
     nuova_stringa = ""
     for parola in lista:
         if len(parola) == l:
-                nuova_stringa = nuova_stringa + " " + parola
+            nuova_stringa = nuova_stringa + " " + parola
     return nuova_stringa.lstrip()

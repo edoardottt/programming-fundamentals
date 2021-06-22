@@ -9,19 +9,23 @@ scrivere una funzione che prende il nome di un file, lo apre e ritorna il numero
 
 
 """
+
+
 def conta_righe(filename):
     contatore = 0
     with open(filename) as f:
-      for line in f:
-        contatore +=1
+        for line in f:
+            contatore += 1
     return contatore
+
 
 def conta_righe2(filename):
     contatore = 0
     with open(filename) as f:
-      for line in f.readlines():
-        contatore +=1
+        for line in f.readlines():
+            contatore += 1
     return contatore
+
 
 def conta_righe3(filename):
     with open(filename) as f:

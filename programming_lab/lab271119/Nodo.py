@@ -6,6 +6,7 @@ Created on Wed Nov 27 16:13:25 2019
 @author: angelo
 """
 
+
 class Nodo:
     def __init__(self, val):
         self.val = val
@@ -24,18 +25,16 @@ class Nodo:
             else:
                 self.figliodx.aggiungi_nodo(val)
 
-
     def stampa(self, l=[]):
         l.append(self.val)
         if self.figliosx:
-            print('Nodi ricorsioni sx', l)
+            print("Nodi ricorsioni sx", l)
             self.figliosx.stampa(l)
-        print(self.val, end=' ')
+        print(self.val, end=" ")
         if self.figliodx:
-            print('Nodi ricorsioni dx', l)
+            print("Nodi ricorsioni dx", l)
             self.figliodx.stampa(l)
         l.pop()
-
 
     def crea_albero_da_lista(l):
         radice = Nodo(l[0])

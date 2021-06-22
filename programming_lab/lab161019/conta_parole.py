@@ -13,10 +13,11 @@ esempio: conta_parole("a e i o u", 1) ritorna 5
                   pluto', 4) ritorna 1
 """
 
+
 def conta_parole(stringa, lunghezza):
     lista = stringa.split()
     c = 0
     for parola in lista:
         if len(parola) == lunghezza:
-            c = c+1
+            c = c + 1
     return c

@@ -12,19 +12,23 @@ Nello specifico:
 
 """
 
+
 def check_mat(m):
-    if type(m) != list: return False
-    if len(m)==0 or type(m[0]) != list:
+    if type(m) != list:
+        return False
+    if len(m) == 0 or type(m[0]) != list:
         return False
     colonne = len(m[0])
     for riga in m:
-        if type(riga) != list or len(riga) != colonne: return False
+        if type(riga) != list or len(riga) != colonne:
+            return False
         for el in riga:
-            if not isinstance(el,(int,float)):
+            if not isinstance(el, (int, float)):
                 return False
     return True
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     A = [[5, 7, 2, -3], [-1, 5, 4, 0], [2, -1, 7, 3]]
     print(check_mat(A))
 
@@ -34,4 +38,4 @@ if __name__ == '__main__':
     C = [[5, 7, 2, " "], [-1, 5, 4, 0], [2, -1, 7]]
     print(check_mat(C))
 
-    print(check_mat([4,5,6]))
+    print(check_mat([4, 5, 6]))

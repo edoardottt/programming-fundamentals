@@ -10,6 +10,7 @@ es: "tanti baci a tutti" {1:1, 4:1, 5:2}
 """
 from frequenze import S
 
+
 def frequenza_lunghezze(s):
     parole = s.split()
     diz = {}
@@ -20,10 +21,10 @@ def frequenza_lunghezze(s):
             diz[len(parola)] += 1
     return diz
 
+
 def frequenza_lunghezze2(s):
     parole = s.split()
     diz = {}
     for parola in parole:
         diz[len(parola)] = diz.get(len(parola), 0) + 1
     return diz
-

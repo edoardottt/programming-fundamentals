@@ -13,18 +13,19 @@ es:
 
     ritorna i
 """
+
+
 def trova_vocale(filename):
     with open(filename) as f:
         maxvoc = 0
-        voc = ''
+        voc = ""
         for riga in f:
-            for vocale in 'aeiou':
+            for vocale in "aeiou":
                 cont = riga.count(vocale)
-                if  cont > maxvoc:
+                if cont > maxvoc:
                     voc = vocale
                     maxvoc = cont
     return voc
 
-trova_vocale('testa_vocali.txt')
 
-
+trova_vocale("testa_vocali.txt")

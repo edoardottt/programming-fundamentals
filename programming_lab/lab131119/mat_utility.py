@@ -36,17 +36,19 @@ per casa:
 from check_mat import check_mat
 
 
-def get_riga(A,i):
-    if not check_mat(A) or not (0<=i<=len(A)):
+def get_riga(A, i):
+    if not check_mat(A) or not (0 <= i <= len(A)):
         return 0
     return A[i]
 
-def get_colonna(A,i):
-    if not check_mat(A) or not (0<=i<=len(A[0])):
+
+def get_colonna(A, i):
+    if not check_mat(A) or not (0 <= i <= len(A[0])):
         return 0
     return [A[j][i] for j in range(len(A))]
 
+
 def get_diagonale(A):
-    if not check_mat(A) or len(A)!=len(A[0]):
+    if not check_mat(A) or len(A) != len(A[0]):
         return 0
     return [A[j][j] for j in range(len(A))]

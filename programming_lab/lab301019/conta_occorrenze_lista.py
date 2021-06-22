@@ -11,6 +11,8 @@ es:
     ritorna la lista [(1,1), (2,3), ("b",1), ("a",2), (2.0,4), ("casa",2)]
 
 """
+
+
 def conta_occorrenze_lista(lista):
     diz = {}
     for elemento in lista:
@@ -18,9 +20,10 @@ def conta_occorrenze_lista(lista):
         if elemento not in diz:
             for i in lista:
                 if elemento == i:
-                     conta += 1
+                    conta += 1
             diz[elemento] = conta
     return list(diz.items())
+
 
 def conta_occorrenze_lista2(lista):
     diz = {}
@@ -29,18 +32,20 @@ def conta_occorrenze_lista2(lista):
             diz[elemento] = lista.count(elemento)
     return list(diz.items())
 
+
 def conta_occorrenze_lista3(lista):
     diz = {}
     for elemento in lista:
-        tupla = elemento,type(elemento)
+        tupla = elemento, type(elemento)
         if tupla not in diz:
             diz[tupla] = 1
         else:
             diz[tupla] += 1
-    return [(tupla[0],diz[tupla]) for tupla in diz]
+    return [(tupla[0], diz[tupla]) for tupla in diz]
+
 
 def conta_occorrenze_lista4(lista):
-    diz = {(x,type(x)):0 for x in lista}
+    diz = {(x, type(x)): 0 for x in lista}
     for elemento in lista:
         diz[(elemento, type(elemento))] += 1
-    return [(el[0],diz[el]) for el in diz]
+    return [(el[0], diz[el]) for el in diz]

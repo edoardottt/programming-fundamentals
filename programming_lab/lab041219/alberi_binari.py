@@ -6,6 +6,7 @@ Created on Wed Dec  4 11:21:47 2019
 @author: angelo
 """
 
+
 class NodoBinario:
     def __init__(self, V, SX=None, DX=None):
         self.valore = V
@@ -13,20 +14,19 @@ class NodoBinario:
         self.dx = DX
 
     def __str__(self, livello=0):
-        risultato = ''
+        risultato = ""
         if self.sx:
-            risultato += '\n' + '\t'*livello + self.sx.__str__(livello+1)
-        risultato += '\n' + '\t'*livello + f"{self.valore}"
+            risultato += "\n" + "\t" * livello + self.sx.__str__(livello + 1)
+        risultato += "\n" + "\t" * livello + f"{self.valore}"
         if self.dx:
-            risultato += '\n' + '\t'*livello + self.dx.__str__(livello+1)
+            risultato += "\n" + "\t" * livello + self.dx.__str__(livello + 1)
         return risultato
 
 
-
 def altezza(albero):
-    """ Funzione che prende un albero binario e ritorna
+    """Funzione che prende un albero binario e ritorna
     l'altezza dell'albero, ovvero la più lunga distanza
-    di una foglia dalla radice """
+    di una foglia dalla radice"""
 
     if not albero.sx and not albero.dx:
         return 0
@@ -42,8 +42,8 @@ def altezza(albero):
 
 
 def trova_massimo(albero):
-    """ Funzione che prende un albero binario e ritorna il
-        valore massimo dell'albero """
+    """Funzione che prende un albero binario e ritorna il
+    valore massimo dell'albero"""
     if not albero.sx and not albero.dx:
         return albero.valore
     m1, m2 = albero.valore, albero.valore
@@ -52,9 +52,3 @@ def trova_massimo(albero):
     if albero.dx:
         m2 = trova_massimo(albero.dx)
     return max(m1, m2, albero.valore)
-
-
-
-
-
-

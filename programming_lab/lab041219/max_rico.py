@@ -22,6 +22,7 @@ max([3,4]) =        3 > max([4]) ?
 max([4]) =          4 !!!!
 """
 
+
 def max_rico(l):
     if len(l) == 1:
         return l[0]
@@ -31,9 +32,3 @@ def max_rico(l):
     if l[0] > massimo_relativo:
         return l[0]
     return massimo_relativo
-
-
-
-
-
-

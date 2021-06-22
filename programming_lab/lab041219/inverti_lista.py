@@ -23,15 +23,9 @@ inversione ([2] + [3,4]) = inversione([3,4]) + [2]
 
 """
 
+
 def inverti_lista(l):
-    if len(l) <=1:
+    if len(l) <= 1:
         return l
 
     return inverti_lista(l[1:]) + [l[0]]
-
-
-
-
-
-
-

@@ -9,6 +9,7 @@ di nodi di un albero.
 
 """
 
+
 class Nodo:
     def __init__(self, v):
         self.valore = v
@@ -16,14 +17,13 @@ class Nodo:
         self.dx = None
 
     def __str__(self, livello=0):
-        risultato = ''
+        risultato = ""
         if self.sx:
-            risultato += '\n' + '\t'*livello + self.sx.__str__(livello+1)
-        risultato += '\n' + '\t'*livello + f"{self.valore}"
+            risultato += "\n" + "\t" * livello + self.sx.__str__(livello + 1)
+        risultato += "\n" + "\t" * livello + f"{self.valore}"
         if self.dx:
-            risultato += '\n' + '\t'*livello + self.dx.__str__(livello+1)
+            risultato += "\n" + "\t" * livello + self.dx.__str__(livello + 1)
         return risultato
-
 
     def conta_nodi(self):
         if not self.sx and not self.dx:
@@ -37,17 +37,17 @@ class Nodo:
 
 
 def conta_nodi(albero):
-    """ caso base = None ritorn 0
-        caso ricorsivo = ritorno 1 + il numero di figli di sx + il numero di figli di dx """
+    """caso base = None ritorn 0
+    caso ricorsivo = ritorno 1 + il numero di figli di sx + il numero di figli di dx"""
     if albero == None:
         return 0
     return 1 + conta_nodi(albero.sx) + conta_nodi(albero.dx)
 
 
 def conta_nodi2(albero):
-    """ caso base = nodo foglia -> ritorno 1
-        caso ricorsivo = ritorno 1 + il numero di figli di sx + il numero di figli di dx
-        """
+    """caso base = nodo foglia -> ritorno 1
+    caso ricorsivo = ritorno 1 + il numero di figli di sx + il numero di figli di dx
+    """
     if not albero.sx and not albero.dx:
         return 1
     c = 1
@@ -59,9 +59,9 @@ def conta_nodi2(albero):
 
 
 def trova_massimo(albero):
-    """ caso base: nodo foglia -> foglia.valore
-        caso ricorsivo: albero con figlio sx e figlio dx
-            ritorno il maggior fra foglia.valore e max(sx) e max(dx)
+    """caso base: nodo foglia -> foglia.valore
+    caso ricorsivo: albero con figlio sx e figlio dx
+        ritorno il maggior fra foglia.valore e max(sx) e max(dx)
     """
     if not albero.sx and not albero.dx:
         return albero.valore
@@ -74,7 +74,7 @@ def trova_massimo(albero):
 
 
 def calcola_altezza(albero):
-    """ La maggiore lunghezza del cammino dalla radice a una foglia
+    """La maggiore lunghezza del cammino dalla radice a una foglia
 
     caso base: nodo foglia: 0
     caso ricorsivo: 1 + altezza_massima fra figlio sx e figlio dx
@@ -87,8 +87,3 @@ def calcola_altezza(albero):
     if albero.dx:
         m2 = calcola_altezza(albero.dx)
     return max(m1, m2) + 1
-
-
-
-
-

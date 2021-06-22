@@ -19,9 +19,8 @@ codice OPIS : BGFZSJXL
 
 """
 
+
 def palindromo(parola):
     if len(parola) <= 1:
         return True
     return parola[0] == parola[-1] and palindromo(parola[1:-1])
-
-

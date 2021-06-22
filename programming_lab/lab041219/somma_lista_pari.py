@@ -13,17 +13,12 @@ somma([]) = 0
 CODICE OPIS 57S6HE9N
 """
 
+
 def somma_lista_pari(l):
     if l == []:
         return 0
     somma_parziale = somma_lista_pari(l[1:])
-# Modulo 2 ritorna 1 (ovvero True) se dispari
+    # Modulo 2 ritorna 1 (ovvero True) se dispari
     if l[0] % 2:
         return somma_parziale
     return l[0] + somma_parziale
-
-
-
-
-
-

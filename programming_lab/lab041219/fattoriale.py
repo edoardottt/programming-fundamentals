@@ -15,15 +15,15 @@ n! = n * (n-1)!
 
 """
 
+
 def fattoriale(n):
     if n == 1:
         return 1
-    return n * fattoriale(n-1)
+    return n * fattoriale(n - 1)
+
 
 def fattoriale_iterativo(n):
     fatt = 1
-    for i in range(n,1,-1):
+    for i in range(n, 1, -1):
         fatt *= i
     return fatt
-
-

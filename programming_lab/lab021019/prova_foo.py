@@ -1,5 +1,6 @@
-a=5
+a = 5
+
 
 def foo(b):
-    c= a*b
+    c = a * b
     return c

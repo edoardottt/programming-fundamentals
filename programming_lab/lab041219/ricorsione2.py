@@ -14,9 +14,11 @@ massimo([c])
 
 """
 
+
 def f(l):
     c = l
     return c
+
 
 def g(l):
     b = l[0]
@@ -24,6 +26,7 @@ def g(l):
     if b > m:
         return b
     return m
+
 
 def h(l):
     a = l[0]
@@ -33,10 +36,9 @@ def h(l):
     return m
 
 
-a,b,c = 3, 5,7
-j = h([a,b,c])
+a, b, c = 3, 5, 7
+j = h([a, b, c])
 print(j)
-
 
 
 def trova_max(l):
@@ -48,7 +50,7 @@ def trova_max(l):
     return m
 
 
-'''
+"""
 caso_base : la lista ha un solo elemento -> è il max
 
 caso_ricorsivo: la lista ha n elementi: ritorno il
@@ -86,4 +88,4 @@ trova_max([56,33,567,224,6,774,3,22245,66765,43])
 
 trova_max([43]) -> 43
 
-'''
+"""

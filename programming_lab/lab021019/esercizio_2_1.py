@@ -6,7 +6,7 @@ schermo, infine moltiplichi i due numeri interi su una
 nuova linea.
 """
 
+
 def es(s1, s2, n1, n2):
-    print(s1+s2, "\n", n1*n2, sep='')
+    print(s1 + s2, "\n", n1 * n2, sep="")
     return
-    

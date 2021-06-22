@@ -12,7 +12,8 @@ caso_base:     n=1 -> 1
 caso_ricorsivo: n>1 -> n * (n-1)!
 """
 
+
 def factorial_ric(n):
     if n == 1:
         return 1
-    return n * factorial_ric(n-1)
+    return n * factorial_ric(n - 1)

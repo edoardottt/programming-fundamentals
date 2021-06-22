@@ -6,8 +6,9 @@ Created on Wed Dec  4 12:32:19 2019
 @author: angelo
 """
 
+
 class Nodo:
-    def __init__(self, V, figli = []):
+    def __init__(self, V, figli=[]):
         self.valore = V
         if len(figli) == 0:
             self.figli = []
@@ -22,4 +23,3 @@ def trova_massimo(albero):
         if m > max_rel:
             max_rel = m
     return max_rel
-

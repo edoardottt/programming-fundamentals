@@ -18,10 +18,8 @@ caso ricorsivo: la lista ha n elementi:
 
 """
 
+
 def somma_ric(l):
     if len(l) == 1:
         return l[0]
     return l[0] + somma_ric(l[1:])
-
-
-

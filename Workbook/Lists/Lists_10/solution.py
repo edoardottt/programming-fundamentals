@@ -1,5 +1,3 @@
-
-
 def es64(l):
     m = max(l)
     rows = len(str(m))

@@ -1,11 +1,11 @@
 def es79(lista):
-    '''
+    """
     Si definisca la funzione ricorsiva (o che usa una vostra funzione ricorsiva) es79(lista).
     La funzione prende in input una lista che puo' essere vuota, contenere interi e/o altre liste del suo stesso tipo.
-    Al termine della funzione la lista deve risultare invertita e lo stesso deve accadere 
+    Al termine della funzione la lista deve risultare invertita e lo stesso deve accadere
     a tutte le liste in essa contenute, ricorsivamente.
     Inoltre la funzione restituisce una tupla di tre elementi.
-    Al primo posto della tupla deve comparire il numero totale di interi presenti nella lista e nelle sue sottoliste. 
+    Al primo posto della tupla deve comparire il numero totale di interi presenti nella lista e nelle sue sottoliste.
     Al secondo posto della tupla deve comparire la somma di tutti gli interi presenti nella lista e nelle sue sottoliste.
     Al terzo posto della tupla deve comparire la lista, ordinata in modo crescente, contenente una sola volta i
     differenti interi presenti nella lista e nelle sue sottoliste.
@@ -13,24 +13,25 @@ def es79(lista):
      lista = [3, 3, 5, [[1, 8, [9, 3]], 3, [2, [9, [5, 6],[9]] ] ]]
     alla fine la lista dev'essere
      lista = [[[[[9], [6, 5], 9], 2], 3, [[3, 9], 8, 1]], 5, 3, 3]
-    la funzione es79(lista) restituisce la tupla 
+    la funzione es79(lista) restituisce la tupla
     (13, 66, [1, 2, 3, 5, 6, 8, 9])
-     ''' 
+    """
     return ricorsione(lista)
+
+
 def ricorsione(lista):
-    a=b=0
+    a = b = 0
     ins = set()
     for elem in lista:
-        if type(elem)==list:
-            x,y,z = ricorsione(elem)
-            a+=x
-            b+=y
+        if type(elem) == list:
+            x, y, z = ricorsione(elem)
+            a += x
+            b += y
             ins = ins | set(z)
         else:
-            a+=1
-            b+=elem
+            a += 1
+            b += elem
             ins.add(elem)
     lista.reverse()
     lista1 = sorted(list(ins))
-    return (a,b,lista1)
-        
+    return (a, b, lista1)

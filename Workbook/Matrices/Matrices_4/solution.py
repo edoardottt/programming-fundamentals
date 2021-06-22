@@ -1,5 +1,3 @@
-
-
 def es56(tabella):
     counts = {}
     mc = 0
@@ -17,6 +15,6 @@ def es56(tabella):
     for r in tabella:
         for i, v in enumerate(r):
             if v in maxxes:
-                r[i] = '*'
+                r[i] = "*"
     maxxes.sort()
     return maxxes

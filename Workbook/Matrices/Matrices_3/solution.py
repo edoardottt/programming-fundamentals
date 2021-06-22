@@ -1,5 +1,3 @@
-
-
 def es55(sel, m, n, A):
     vm = vM = A[0][0]
     for r in A:
@@ -7,7 +5,7 @@ def es55(sel, m, n, A):
             vm = min(vm, v)
             vM = max(vM, v)
     if m != n:
-        if sel == 'r':
+        if sel == "r":
             A[m], A[n] = A[n], A[m]
         else:
             for r in range(len(A)):

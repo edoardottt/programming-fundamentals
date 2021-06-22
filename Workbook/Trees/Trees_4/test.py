@@ -16,7 +16,7 @@ class Test(testlib.TestCase):
             - lista2: lista nodi albero 2 in input
             - expected: lista nodi albero output
         '''
-        #controllo la ricorsione
+        # controllo la ricorsione
 
         tree1 = albero.AlberoBinario.fromList(lista1)
         tree2 = albero.AlberoBinario.fromList(lista2)

@@ -1,6 +1,6 @@
 import albero
 
-'''
+"""
     Es 1: 3 punti
     Si definisca la funzione es7(tree,insieme,k ) ricorsiva (o che fa uso 
     di funzioni o metodi ricorsive/i) che:
@@ -29,24 +29,21 @@ import albero
            |     |                   |   |   |   |  |   |  |   |   
            3     1                   1   2   12  13 15  6  4   0   
                                                                    
-    '''
+    """
 
 
-def es7(tree,insieme,k):
-    if len(tree.f)==0: return 0
+def es7(tree, insieme, k):
+    if len(tree.f) == 0:
+        return 0
     else:
         c = 0
         a = 0
         for elem in tree.f:
-            if elem.id in insieme: c+=1
-        if c==k: a=1
+            if elem.id in insieme:
+                c += 1
+        if c == k:
+            a = 1
         t = 0
         for elem in tree.f:
-            t = t + es7(elem,insieme,k)
+            t = t + es7(elem, insieme, k)
         return t + a
-    
-    
-    
-    
-    
-    

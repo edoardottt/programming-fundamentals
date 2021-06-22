@@ -5,7 +5,7 @@ import os.path
 
 def es72(dir, jsonFile):
     dizio, massimo = esploraDir(dir, dir)
-    with open(jsonFile, mode='w', encoding='utf8') as f:
+    with open(jsonFile, mode="w", encoding="utf8") as f:
         json.dump({dir: dizio}, f, indent=4)
     return massimo
 
@@ -16,7 +16,8 @@ def esploraDir(dir, name):
     massimo = 0
     contafile = 0
     for f in files:
-        if f[0] == '.': continue
+        if f[0] == ".":
+            continue
         contafile += 1
         fn = "{}/{}".format(dir, f)
         if os.path.isdir(fn):

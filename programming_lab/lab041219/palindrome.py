@@ -5,7 +5,7 @@ Created on Wed Dec  4 15:00:44 2019
 
 @author: angelo
 
-Write a paindrome recursive function that takes a string as input and returns True if it is a palindrome, False otherwise
+Write a palindrome recursive function that takes a string as input and returns True if it is a palindrome, False otherwise
 
 oro anna osso aveva ossesso ottetto
 itopinonavevanonipoti

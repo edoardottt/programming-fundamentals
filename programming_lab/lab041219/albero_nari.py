@@ -7,19 +7,19 @@ Created on Wed Dec  4 12:32:19 2019
 """
 
 
-class Nodo:
-    def __init__(self, V, figli=[]):
-        self.valore = V
-        if len(figli) == 0:
-            self.figli = []
+class Node:
+    def __init__(self, V, sons=[]):
+        self.value = V
+        if len(sons) == 0:
+            self.sons = []
         else:
-            self.figli = figli
+            self.sons = sons
 
 
-def trova_massimo(albero):
-    max_rel = albero.valore
-    for figlio in albero.figli:
-        m = trova_massimo(figlio)
+def find_max(tree):
+    max_rel = tree.value
+    for sons in tree.sons:
+        m = find_max(sonso)
         if m > max_rel:
             max_rel = m
     return max_rel

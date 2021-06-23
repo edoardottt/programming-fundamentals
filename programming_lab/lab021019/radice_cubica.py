@@ -1,3 +1,3 @@
-n = float(input("Inserisci il numero da radicare "))
+n = float(input("Enter the number to root "))
 radice_cub = n ** (1 / 3)
-print("La radice cubica e'", radice_cub)
+print("The cube root is", radice_cub)

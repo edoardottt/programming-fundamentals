@@ -1,6 +1,6 @@
-fl1 = float(input("Inserire il valore 1: "))
-fl2 = float(input("Inserire il valore 2: "))
-fl3 = float(input("Inserire il valore 3: "))
+fl1 = float(input("Enter the value 1: "))
+fl2 = float(input("Enter the value 2: "))
+fl3 = float(input("Enter the value 3: "))
 
 
 def x1x2(a, b, c):

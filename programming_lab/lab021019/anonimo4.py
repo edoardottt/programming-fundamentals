@@ -1,15 +1,15 @@
-a = float(input("inserire a"))
-b = float(input("inserire b"))
-c = float(input("inserire c"))
+a = float(input("insert a"))
+b = float(input("insert b"))
+c = float(input("insert c"))
 
 
-def calocolare_x1(a, b, c):
-    print("id di a:", id(a))
+def calculate_x1(a, b, c):
+    print("id of a:", id(a))
     x1 = (-b + (b ** 2 - 4 * a * c) ** 0.5) / (2 * a)
     return x1
 
 
-def calcolare_x2(a, b, c):
+def calculate_x2(a, b, c):
     x2 = (-b - (b ** 2 - 4 * a * c) ** 0.5) / (2 * a)
     return x2
 

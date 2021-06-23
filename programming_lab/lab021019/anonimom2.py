@@ -1,4 +1,4 @@
-# non entra nella funzione
+# does not enter the function
 def x1(a, b, c):
     delta = (b ** 2 - 4 * a * c) ** (1 / 2)
     xx1 = (-b + delta) / (2 * a)

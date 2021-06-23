@@ -1,6 +1,6 @@
-a = float(input("Dammi a: "))
-b = float(input("Dammi b: "))
-c = float(input("Dammi c: "))
+a = float(input("Enter a: "))
+b = float(input("Enter b: "))
+c = float(input("Enter c: "))
 delta = b ** 2 - 4 * a * c
 
 

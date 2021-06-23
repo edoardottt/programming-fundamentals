@@ -1,40 +1,40 @@
 x = 4
 """
-Test uguaglianza ==
-Test maggiore >
-Test minore <
-Test maggiore o uguale >=
-Test minore o uguale <=
-Test diverso !=
+Test equality ==
+Test greater than >
+Test lesser than<
+Test greater than or equal >=
+Test less than or equal <=
+Test different !=
 """
 
 
 def foo(a):
     if a > 0:
-        print("a e' positivo")
+        print("a is positive")
     elif a < 0:
-        print("a e' negativo")
+        print("a is negative")
     else:
-        print("a e' 0")
+        print("a is 0")
 
 
 def foo2(a):
     if a > 0:
-        print("a e' positivo")
+        print("a is positive")
     else:
         if a < 0:
-            print("a e' negativo")
+            print("a is negative")
         else:
-            print("a e' 0")
+            print("a is 0")
 
 
 def foo3(a):
     if a > 0:
-        print("a e' positivo")
+        print("a is positive")
     if a < 0:
-        print("a e' negativo")
+        print("a is negative")
     else:
-        print("a e' 0")
+        print("a is 0")
 
 
 foo(7)

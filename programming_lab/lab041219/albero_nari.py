@@ -19,7 +19,7 @@ class Node:
 def find_max(tree):
     max_rel = tree.value
     for sons in tree.sons:
-        m = find_max(sonso)
+        m = find_max(sons)
         if m > max_rel:
             max_rel = m
     return max_rel

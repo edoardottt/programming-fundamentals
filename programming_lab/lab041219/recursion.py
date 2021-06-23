@@ -9,20 +9,20 @@ Created on Wed Dec  4 14:13:16 2019
 
 def f():
     r = 1022
-    "robatosta..."
+    "tough..."
     return r
 
 
 def g():
     p = 909
-    "robapiùtosta"
+    "tougher"
     p += f()
     return p
 
 
 def h():
     q = 3343
-    "robaintricatissima"
+    "very intricate"
     q *= g()
     return q
 

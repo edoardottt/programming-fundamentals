@@ -34,7 +34,7 @@ If you want to translate it from italian to english just send me a message :)
 Download 📡
 --------
 
-- `git -clone https://github.com/edoardottt/programming-fundamentals.git`
+- `git clone https://github.com/edoardottt/programming-fundamentals.git`
 
 Disclaimer⚠️
 --------

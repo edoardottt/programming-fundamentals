@@ -1,9 +1,9 @@
 """
-Scrivere una funzione programma che prenda due variabili
-stringa e due numeriche intere dall'utente, le concateni
-(unisca le due stringhe senza spazi) e le visualizzi sullo
-schermo, infine moltiplichi i due numeri interi su una
-nuova linea.
+Write a program function that takes two variables
+string and two integers from the user, concatenate them
+(join the two strings without spaces) and display them on the
+screen, finally multiply the two integers by one
+new line.
 """
 
 

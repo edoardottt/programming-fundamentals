@@ -5,21 +5,21 @@ Created on Wed Dec  4 14:44:28 2019
 
 @author: angelo
 
-Scrivere una funzione ricorsiva che fa la somma di tutti i numeri di una lista
+Write a recursive function that sums all numbers in a list
 
-es: somma_ric([1,2,3]) -> 6
+es: sum_ric([1,2,3]) -> 6
 
-caso base: la lista ha un solo elemento ->
-            somma uguale l[0] (l'unico elemento)
+case base: the list has only one element ->
+            sum same l[0] (the only element)
 
-caso ricorsivo: la lista ha n elementi:
-    ritorn il primo elemento + la somma dei restanti
-    n-1 elementi (return l[0] + somma_ric(l[1:]))
+case recursive: the list has n elements:
+    the first element returned + the sum of the remainder
+    n-1 element (return l[0] + sum_ric(l[1:]))
 
 """
 
 
-def somma_ric(l):
+def sum_ric(l):
     if len(l) == 1:
         return l[0]
-    return l[0] + somma_ric(l[1:])
+    return l[0] + sum_ric(l[1:])

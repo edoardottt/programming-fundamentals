@@ -7,48 +7,48 @@ Created on Wed Dec  4 11:21:47 2019
 """
 
 
-class NodoBinario:
+class BinaryNode:
     def __init__(self, V, SX=None, DX=None):
-        self.valore = V
+        self.value = V
         self.sx = SX
         self.dx = DX
 
-    def __str__(self, livello=0):
-        risultato = ""
+    def __str__(self, level=0):
+        result = ""
         if self.sx:
-            risultato += "\n" + "\t" * livello + self.sx.__str__(livello + 1)
-        risultato += "\n" + "\t" * livello + f"{self.valore}"
+            result += "\n" + "\t" * level + self.sx.__str__(level + 1)
+        result += "\n" + "\t" * level + f"{self.value}"
         if self.dx:
-            risultato += "\n" + "\t" * livello + self.dx.__str__(livello + 1)
-        return risultato
+            result += "\n" + "\t" * level + self.dx.__str__(level + 1)
+        return result
 
 
-def altezza(albero):
-    """Funzione che prende un albero binario e ritorna
-    l'altezza dell'albero, ovvero la più lunga distanza
-    di una foglia dalla radice"""
+def height(tree):
+    """Function that takes a binary tree and returns
+    the height of the tree, i.e. the longest distance
+    of a leaf from the root"""
 
-    if not albero.sx and not albero.dx:
+    if not tree.sx and not tree.dx:
         return 0
     alt, alt2 = 0, 0
-    if albero.sx:
-        alt = altezza(albero.sx)
+    if tree.sx:
+        alt = height(tree.sx)
     if albero.dx:
-        alt2 = altezza(albero.dx)
+        alt2 = height(tree.dx)
     if alt > alt2:
         return alt + 1
     else:
         return alt2 + 1
 
 
-def trova_massimo(albero):
-    """Funzione che prende un albero binario e ritorna il
-    valore massimo dell'albero"""
-    if not albero.sx and not albero.dx:
-        return albero.valore
-    m1, m2 = albero.valore, albero.valore
-    if albero.sx:
-        m1 = trova_massimo(albero.sx)
-    if albero.dx:
-        m2 = trova_massimo(albero.dx)
-    return max(m1, m2, albero.valore)
+def find_max(tree):
+    """Function that takes a binary tree and returns the
+   maximum value of the tree"""
+    if not tree.sx and not tree.dx:
+        return tree.value
+    m1, m2 = tree.value, tree.value
+    if tree.sx:
+        m1 = find_max(tree.sx)
+    if tree.dx:
+        m2 = find_max(tree.dx)
+    return max(m1, m2, tree.value)

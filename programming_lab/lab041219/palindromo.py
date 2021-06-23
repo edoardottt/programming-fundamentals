@@ -5,22 +5,22 @@ Created on Wed Dec  4 15:00:44 2019
 
 @author: angelo
 
-Scrivere una funzione ricorsiva paindromo che prende in ingresso una stringa e ritorna True se è un palindromo, False altrimenti
+Write a paindrome recursive function that takes a string as input and returns True if it is a palindrome, False otherwise
 
 oro anna osso aveva ossesso ottetto
 itopinonavevanonipoti
 
-caso base: una lettera -> True
-           due lettere -> True se le due lettere sono uguali
+Base code: a letter -> True
+           two letters -> True if the two letters are the same
 
-caso ricorsivo: parola[0] == parola[-1] and palindromo (parola[1:-1])
+case recursive: word[0] == word[-1] and palindrome (word[1:-1])
 
 codice OPIS : BGFZSJXL
 
 """
 
 
-def palindromo(parola):
-    if len(parola) <= 1:
+def palindrome(word):
+    if len(word) <= 1:
         return True
-    return parola[0] == parola[-1] and palindromo(parola[1:-1])
+    return word[0] == word[-1] and palindrome(word[1:-1])

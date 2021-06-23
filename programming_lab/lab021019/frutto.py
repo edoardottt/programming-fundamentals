@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-nome = input("Inserisci il nome ")
-frutto = input("Inserisci il frutto ")
-print(nome, "adora mangiare", frutto)
-print(nome + " adora mangiare " + frutto)
-print("%s adora mangiare %s" % (nome, frutto))
-s = "{} adora mangiare {}"
-print(s.format(nome, frutto))
+name = input("Enter your name")
+fruit = input("Enter the fruit")
+print(name, "loves to eat", fruit)
+print(name + " loves to eat " + fruit)
+print("%s loves to eat %s" % (name, fruit))
+s = "{} loves to eat {}"
+print(s.format(name, fruit))

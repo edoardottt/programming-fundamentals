@@ -4,14 +4,14 @@
 Created on Wed Dec  4 15:50:58 2019
 
 @author: angelo
-Scrivere una funzione che prende todos.json e
-ritorna l'insieme degli utenti (userId) che anno
-almeno un todo
+Write a function that takes todos.json and
+returns the set of users (userId) that year
+at least one whole
 
-Scrivere user_with_max_todos che ritorna
-l'userId dell'utente che ha il maggior numero
-di todo. Se ce ne sono più di uno con lo stesso
-numero, ritorna la lista.
+Write user_with_max_todos which returns
+the userId of the user who has the highest number
+by todo. If there are more than one with the same
+number, returns the list.
 """
 import json
 

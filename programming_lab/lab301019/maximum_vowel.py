@@ -4,21 +4,21 @@
 Created on Wed Oct 30 17:49:25 2019
 
 @author: angelo
-Scrivere una funzione che prende una stringa che è il nome di un file, e ritorna la vocale che è presente più volte su una stessa riga del file
+Write a function that takes a string that is the name of a file, and returns the vowel that occurs multiple times on the same line of the file
 
-Es: se il file contiene
+Ex: if the file contains
  buffo
- papa
+ pope
  richiami
 
- ritorna 'i'
+ return 'i'
 """
 
 
-def vocale_massima(nomefile):
+def maximum_vowel(filename):
     ripvoc = 0
     voc = ""
-    with open(nomefile) as f:
+    with open(filename) as f:
         for line in f:
             for v in "aeiou":
                 cont = line.count(v)

@@ -14,7 +14,7 @@ def foo(a):
 
 lambda a: 2 * a + a
 
-for chiave in dizionario.keys():
-    print("La chiave", chiave, "vale", dizionario[chiave])
-for chiave, valore in dizionario.items():
-    print("La chiave", chiave, "vale", valore)
+for key in dictionary.keys():
+    print("The key ", key, " value is ", dictionary[key])
+for key, word in dictionary.items():
+    print("The key ", key, " value is ", value)

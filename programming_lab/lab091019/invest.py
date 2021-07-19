@@ -7,8 +7,8 @@ Created on Wed Oct  9 14:13:38 2019
 """
 
 
-def invest(capitale, interesse, anni):
+def invest(capital, interest, years):
     """
-    Scrivere una funzione 'invest' nel file 'invest.py', che prende in input un capitale, un interesse annuale e un numero di anni e ritorna come intero il capitale maturato dopo un investimento di n anni all'interesse i. Usare la formula maturato = capitale * (1+interesse/100)**anni."""
-    maturato = capitale * (1 + interesse / 100) ** anni
-    return int(maturato)
+    Writing an 'invest' function in the 'invest.py' file, which takes capital as input, an annual interest and a number of years and returns as an integer the capital accrued after an investment of n years to interest i. Use the formula accrued = principal * (1 + interest / 100) ** years."""
+    mature = capital * (1 + interest / 100) ** years
+    return int(mature)

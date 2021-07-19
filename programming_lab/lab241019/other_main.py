@@ -9,14 +9,14 @@ Created on Wed Oct 23 09:35:52 2019
 import main
 
 if __name__ == '__main__':
-    print("Sono nell'altro main")
+    print("I'm in the other main")
     main.foo()
 
 
-    dizionari
+    dictionary
     set
-    while contro for:
+    while counter for:
         debugging
-    modifica liste mentre si scorrono
-    for annidati:
+    edit lists as you scroll
+    for nested:
         list comprehension

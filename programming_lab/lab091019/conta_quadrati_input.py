@@ -7,13 +7,13 @@ Created on Wed Oct  9 14:49:01 2019
 """
 
 
-def prendi_numeri():
-    """La funzione prende continuamente da tastiera una stringa, se la stringa è un numero allora stampa a video il suo quadrato, altrimenti non fa nulla. Esce dalla funzione quando l'utente inserisce la parola "fine" e ritorna il numero di quadrati calcolati."""
-    conta_quadrati = 0
-    stringa = ""
-    while stringa != "fine":
-        stringa = input("Inserisci la stringa")
-        if stringa.isnumeric():
-            print(int(stringa) ** 2)
-            conta_quadrati = conta_quadrati + 1
-    return conta_quadrati
+def get_numbers():
+    """The function continuously fetches a string from the keyboard, if the string is a number then it prints its square on the screen, otherwise it does nothing. Exits the function when the user enters the word "done" and returns the number of squares calculated."""
+    square_count = 0
+    string = ""
+    while string != "fine":
+        string = input("Enter the string")
+        if string.isnumeric():
+            print(int(string) ** 2)
+            square_count = square_count + 1
+    return square_count

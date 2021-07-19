@@ -4,33 +4,33 @@
 Created on Wed Oct 23 11:31:48 2019
 
 @author: angelo
-Scrivere una funzione che prende una stringa di parole separate da spazi e ritorna un dizionario in cui le chiavi sono le vocali dell'alfabeto presenti nella stringa di parole. I valori associati alle chiavi sono liste con le parole della stringa originaria che contengono quella vocale.
+Write a function that takes a string of words separated by spaces and returns a dictionary where the keys are the vowels of the alphabet present in the word string. The values ​​associated with the keys are lists with the words of the original string that contain the vowel one.
 
-es: "odio et amo" {'o':['odio','amo'], 'i':['odio'], 'e':['et'], 'a':['amo']}
+ex: "odio et amo" {'o':['odio','amo'], 'i':['odio'], 'e':['et'], 'a':['amo']}
 """
 
 
-def parole_vocali(s):
-    diz = {}
-    parole = s.split()
-    for parola in parole:
-        for vocale in "aeiou":
-            if vocale in parola:
-                if vocale in diz:
-                    diz[vocale].append(parola)
+def vowel_words(s):
+    dic = {}
+    words = s.split()
+    for word in words:
+        for vowel in "aeiou":
+            if vowel in word:
+                if vowel in dic:
+                    dic[vowel].append(word)
                 else:
-                    diz[vocale] = [parola]
-    return diz
+                    dic[vowel] = [word]
+    return dic
 
 
-def parole_vocali2(s):
-    diz = {}
-    parole = s.split()
-    for parola in parole:
-        for vocale in "aeiou":
-            if vocale in parola:
-                diz[vocale] = diz.get(vocale, []) + [parola]
-    return diz
+def vowel_words2(s):
+    dic = {}
+    words = s.split()
+    for word in words:
+        for vowel in "aeiou":
+            if vowel in word:
+                dic[vowel] = dic.get(vowel, []) + [word]
+    return dic
 
 
-parole_vocali("odio et amo aaaaaaaa")
+vocal_words("odio et amo aaaaaaaa")

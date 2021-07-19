@@ -7,10 +7,10 @@ Created on Wed Oct  9 09:42:11 2019
 """
 
 
-def gita(studenti, biglietto):
-    if studenti < 10:
-        return studenti * biglietto
-    elif studenti < 30:
-        return studenti * (biglietto - biglietto * 20 / 100)
+def gita(students, ticket):
+    if students < 10:
+        return students * ticket
+    elif students < 30:
+        return students * (ticket - ticket * 20 / 100)
     else:
-        return studenti * biglietto * 0.7
+        return students * ticket * 0.7

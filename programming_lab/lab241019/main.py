@@ -12,4 +12,4 @@ def foo():
 
 
 if __name__ == "__main__":
-    print("Sono dentro")
+    print("I'm inside")

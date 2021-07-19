@@ -7,17 +7,17 @@ Created on Wed Oct  9 14:07:10 2019
 """
 
 
-def opera(a, b, operazione):
+def opera(a, b, operation):
     """
-    Scrivere una funzione che prende in input due interi e una stringa. In base al contenuto della stringa, che conterrà una operazione, la funzione eseguirà le 4 operazioni di base con i due interi: addizione, sottrazione, moltiplicazione, divisione.
+    Write a function that takes two integers and a string as input. Based on the content of the string, which will contain an operation, the function will perform the 4 basic operations with the two integers: addition, subtraction, multiplication, division.
     """
-    if operazione == "+" or operazione.lower() == "addizione":
+    if operation == "+" or operation.lower() == "addition":
         return a + b
-    elif operazione == "-" or operazione.lower() == "sottrazione":
+    elif operation == "-" or operation.lower() == "subtraction":
         return a - b
-    elif operazione == "*" or operazione.lower() == "moltiplicazione":
+    elif operation == "*" or operation.lower() == "multiplication":
         return a * b
-    elif operazione == "/" or operazione.lower() == "divisione":
+    elif operation == "/" or operation.lower() == "division":
         return a / b
     else:
         return 0

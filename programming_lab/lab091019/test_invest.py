@@ -16,7 +16,7 @@ if __name__ == "__main__":
             print("Test case: {}\tOK".format(test_case))
         else:
             print(
-                "Test case: {}\tNOK, risultato atteso {}, risultato fornito {}".format(
+                "Test case: {}\tNOK, expected result {}, result provided {}".format(
                     test_case, result, val
                 )
             )

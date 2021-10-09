@@ -6,7 +6,10 @@ Created on Wed Nov 20 11:31:37 2019
 @author: angelo
 Write a draw_color_square function (pic, x1, y1, x2, y2, border_color, inner_color) that takes
 
-    an image pic as a list of color tuple lists 10 two points x1, y1 and x2, y2 corresponding to two edges of a rectangle 11 two color tuples border_color and inner_color 12 and modify the image im by drawing the rectangle identified by the two points x1, y1 and x2, y2, using color_border for the perimeter of the rectangle and color_in for the area. The function returns the number of pixels modified in images.
+    an image pic as a list of color tuple lists 10 two points x1, y1 and x2, y2 corresponding to two edges of a rectangle 
+    two color tuples border_color and inner_color 
+    and modify the image im by drawing the rectangle identified by the two points x1, y1 and x2, y2, using color_border for the perimeter of the rectangle and color_in for the area.
+    The function returns the number of pixels modified in images.
 """
 
 from images import load, save

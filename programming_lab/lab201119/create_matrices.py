@@ -9,7 +9,7 @@ Created on Wed Nov 20 14:10:59 2019
 
 
 def create_matrix_numbers(n, m):
-    """the function constructs a matrix that has all numbers from 1 to n * m ordered by line 13 e.g.:
+    """the function constructs a matrix that has all numbers from 1 to n * m ordered by line e.g.:
         create_matrix_numbers(2, 4) return
         [[1,2,3,4],[5,6,7,8]]"""
 

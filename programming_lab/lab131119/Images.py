@@ -1,14 +1,15 @@
 """
-Funzioni di utilita' per leggere e salvare una immagine.
+Utility functions to read and save an image.
 """
 import png
 
 
 def load(fname):
-    """Carica la immagine PNG dal file fname.
-    Torna una lista di liste di pixel.
-    Ogni pixel è una tupla (R, G, B) dei 3 colori.
-    Ciascun colore è un intero tra 0 e 255 compresi.
+    """
+    Upload the PNG image from the fname file. 
+    A list of pixel lists returns. 
+    Each pixel is a tuple (R, G, B) of the 3 colors. 
+    Each color is an integer between 0 and 255 inclusive.
     """
     with open(fname, mode="rb") as f:
         reader = png.Reader(file=f)
@@ -23,10 +24,11 @@ def load(fname):
 
 
 def save(img, filename):
-    """Salva la immagine img  nel file filename in formato PNG8.
-    Img e' una lista di liste di pixel.
-    Ogni pixel è una tupla (R, G, B) dei 3 colori.
-    Ciascun colore è un intero tra 0 e 255 compresi.
+    """
+    ave the img image in the filename file in PNG8 format. 
+    Img is a list of pixel lists. 
+    Each pixel is a tuple (R, G, B) of the 3 colors. 
+    Each color is an integer between 0 and 255 inclusive.
     """
     pngimg = png.from_array(img, "RGB")
     pngimg.save(filename)

@@ -10,30 +10,30 @@ Created on Wed Nov 27 13:06:47 2019
 class Punto:
     def __init__(self, x, y):
         if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
-            raise TypeError("Non posso creare un punto con parametri non numerici")
+            raise TypeError("I cannot create a point with non-numeric parameters")
         self.x = x
         self.y = y
 
     def __repr__(self):
-        return "Oggetto Punto(x={}, y={})".format(self.x, self.y)
+        return "Point object (x = {}, y = {})".format(self.x, self.y)
 
     def __str__(self):
-        return "Punto({},{})".format(self.x, self.y)
+        return "Point({},{})".format(self.x, self.y)
 
-    def distanza(self, carletto):
-        if type(carletto) != Punto:
+    def distance(self, carletto):
+        if type(carletto) != Point:
             raise TypeError(
-                "Non posso calcolare la distanza con qualcosa che non è un punto"
+                "I cannot calculate the distance with something that is not a point"
             )
         return ((carletto.x - self.x) ** 2 + (carletto.y - self.y) ** 2) ** 0.5
 
 
-class Rettangolo:
+class Rectangle:
     def __init__(self, p1, p2):
-        if type(p1) != Punto or type(p2) != Punto:
-            raise TypeError("Un rettangolo è definito da due punti")
+        if type(p1) != Point or type(p2) != Point:
+            raise TypeError("A rectangle is defined by two points")
         if p1.x == p2.x or p1.y == p2.y:
-            raise ValueError("I punti non definiscono un rettangolo")
+            raise ValueError("The points do not define a rectangle")
         if p1.x > p2.x:
             xs, xd = p2.x, p1.x
         else:
@@ -42,28 +42,28 @@ class Rettangolo:
             ya, yb = p2.y, p1.y
         else:
             ya, yb = p1.y, p2.y
-        self.vas = Punto(xs, ya)
-        self.vad = Punto(xd, ya)
-        self.vbs = Punto(xs, yb)
-        self.vbd = Punto(xd, yb)
+        self.vas = Point(xs, ya)
+        self.vad = Point(xd, ya)
+        self.vbs = Point(xs, yb)
+        self.vbd = Point(xd, yb)
 
         self.base = xd - xs
-        self.altezza = yb - ya
+        self.height = yb - ya
 
     def __len__(self):
         return 4
 
-    def calcola_base(self):
-        return self.vbs.distanza(self.vbd)
+    def calculate_base(self):
+        return self.vbs.distance(self.vbd)
 
-    def calcola_altezza(self):
-        return self.vas.distanza(self.vbs)
+    def calculate_height(self):
+        return self.vas.distance(self.vbs)
 
-    def calcola_diagonale(self):
-        return self.vas.distanza(self.vbd)
+    def calculate_diagonal(self):
+        return self.vas.distance(self.vbd)
 
-    def calcola_area(self):
-        return self.calcola_base() * self.calcola_altezza()
+    def calculate_area(self):
+        return self.calculate_base() * self.calculate_height()
 
-    def calcola_perimetro(self):
-        return self.base * 2 + self.altezza * 2
+    def calculate_perimeter(self):
+        return self.base * 2 + self.height * 2

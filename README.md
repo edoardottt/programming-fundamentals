@@ -13,8 +13,6 @@
 
 Exercises performed during the course 'Programming Fundamentals' held by Prof. Sterbini, Prof. Monti and Prof. Spognardi at  University La Sapienza of Rome.
 
-If you want to translate it from italian to english just send me a message :)
-
 **The course concerned about:**
 
 - Introduction to programming using the Python language

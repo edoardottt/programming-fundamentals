@@ -17,7 +17,7 @@ Created on Tue Nov 12 19:10:42 2019
 import png
 
 """
-Carica l'immagine PNG e torna una matrice con i pixel, in cui ogni pixel è una tupla RGB (boxed row boxed pixel)
+Load the PNG image and return a matrix with pixels, where each pixel is an RGB (boxed row boxed pixel) tuple
 """
 
 
@@ -35,7 +35,7 @@ def load(fname):
 
 
 """
-Salva l'immagine img nel file filename in formato PNG8
+Save the img image in the filename file in PNG8 format
 """
 
 
@@ -45,22 +45,22 @@ def save(img, filename):
 
 
 """
-Crea un'immagine dati i valori height, width e tupla
+Create an image given the height, width and tuple values
 """
 
 
-def crea(h, w, t=(0, 0, 0)):
+def create(h, w, t=(0, 0, 0)):
     return [[t for i in range(w)] for j in range(h)]
 
 
 """
-Ruota l'immagine intorno al suo asse orizzontale
+Rotate the image around its horizontal axis
 """
 
 
-def ruota1(img):
+def rotate(img):
     h, w = len(img), len(img[0])
-    ret = crea(h, w, (0, 0, 0))
+    ret = create(h, w, (0, 0, 0))
     for y in range(h):
         for x in range(w):
             ret[y][x] = img[h - 1 - y][x]

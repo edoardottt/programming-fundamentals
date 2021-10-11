@@ -5,10 +5,10 @@ Created on Wed Nov 13 17:07:29 2019
 
 @author: angelo
 
-Scrivere una funzione
-quad(imm, x, y, lato, colore)
-che prende un'immagine e disegna nell'immagine un quadrato di lato lato del colore colore a partire dal pixel imm[x][y]
-L'immagine presa come argomento DEVE RISULTARE MODIFICATA
+Write a function
+quad(pic, x, y, side, color)
+which takes an image and draws in the image a square on the side of the color color starting from the pixel pic [x] [y] 
+The image taken as argument MUST BE MODIFIED
 
 00000000
 00000000
@@ -23,19 +23,19 @@ L'immagine presa come argomento DEVE RISULTARE MODIFICATA
 00000000
 
 """
-from immagini01 import *
-from immagini import load, save
+from images01 import *
+from images import load, save
 
 
-def quad(imm, x, y, lato, colore):
-    for i in range(x, x + lato):
-        for j in range(y, y + lato):
-            imm[i][j] = colore
+def quad(pic, x, y, side, color):
+    for i in range(x, x + side):
+        for j in range(y, y + side):
+            pic[i][j] = color
 
 
-def quad_vuoto(imm, x, y, lato, colore):
-    for i in range(lato):
-        imm[x][y + i] = colore
-        imm[x + lato - 1][y + i] = colore
-        imm[x + i][y] = colore
-        imm[x + i][y + lato - 1] = colore
+def quad_blank(pic, x, y, side, color):
+    for i in range(side):
+        pic[x][y + i] = color
+        pic[x + side - 1][y + i] = color
+        pic[x + i][y] = color
+        pic[x + i][y + side - 1] = color

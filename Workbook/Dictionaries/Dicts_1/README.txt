@@ -4,42 +4,42 @@ Copyright (C) 2019- Andrea Sterbini <sterbini@di.uniroma1.it>,
                     Angelo Monti <monti@di.uniroma1.it>, 
                     Matteo Neri <matteo2794@outlook.com>
 
-Tutti i programmi ed i file contenuti in questo archivio/directory sono rilasciati sotto licenza GPL v.3 
+All programs and files contained in this archive / directory are released under the GPL v.3 license
 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-ISTRUZIONI
+INSTRUCTIONS
 ==========
-Per svolgere l'esercizio editate il file program.py usando un editor di testi, meglio ancora un IDE.
-Vanno bene Notepad++, Atom, Spyder, PyCharm ed altri editor di testo. 
-NON usate Notepad, Word, Wordpad o altri editor di documenti.
+To carry out the exercise, edit the program.py file using a text editor, better still an IDE.
+Notepad ++, Atom, Spyder, PyCharm and other text editors are fine. 
+DO NOT use Notepad, Word, Wordpad or other document editors.
 
 TEST
 ====
-Questa directory contiene i file necessari a verificare, su almeno 3 esempi di input, che il vostro programma sia corretto.
-Prima di eseguire i test se necessario installate Python e le librerie necessarie (vedi sotto).
+This directory contains the files necessary to verify, on at least 3 input examples, that your program is correct. 
+Before running the tests, if necessary, install Python and the necessary libraries (see below).
 
-Per controllare se il vostro programma funziona bene sui dati di esempio:
-- aprite una finestra Anaconda Prompt e posizionatevi nella directory dell'esercizio (usando il comando cd)
-- eseguite il comando:
+To check if your program works fine on the sample data: 
+- open an Anaconda Prompt window and go to the exercise directory (using the cd command) 
+- execute the command:
 	python test.py
-- oppure
+- otherwise
 	pytest test.py
 
-Per ottenere informazioni più dettagliate sull'esecuzione (con una analisi dei tempi spesi nelle diverse parti del programma)
-- eseguite invece il comando
+To obtain more detailed information on the execution (with an analysis of the time spent in the different parts of the program)
+- run the command instead
 	pytest -v -rA --profile test.py
 
-SOLUZIONE
+SOLUTION
 =========
-Nella directory è inclusa una nostra soluzione dell'esercizio.
-Vi consigliamo di esaminarla SOLO DOPO AVER PROVATO A RISOLVERE L'ESERCIZIO DA SOLI.
+A solution of our exercise is included in the directory. 
+We advise you to examine it ONLY AFTER TRYING TO SOLVE THE EXERCISE BY YOURSELF.
 
-INSTALLAZIONE
+INSTALLATION
 =============
-Per poter eseguire questi test o quelli di un altro esercizio installate (va fatto una sola volta):
-- la distribuzione Anaconda nella versione che contiene Python 3.x (da https://www.anaconda.com/distribution/)
-- i moduli Python seguenti
-   Aprite un Anaconda Prompt ed eseguite i comandi
+To be able to perform these tests or those of another exercise, install (must be done only once): 
+- the Anaconda distribution in the version that contains Python 3.x (from https://www.anaconda.com/distribution/) 
+- the following Python modules
+   Open an Anaconda Prompt and execute the commands
 	conda install -c conda-forge pytest
 	conda install -c conda-forge ddt
 	conda install -c conda-forge pytest-timeout

@@ -9,24 +9,24 @@ import program
 
 @ddt
 class Test(testlib.TestCase):
-    def do_test(self, tabella, colonna, expected, expectedTab):
-        """Implementazione del test
-        - tabella       : tabella sotto forma di lista di dizionari
-        - colonna       : nome della colonna della tabella
-        - expected      : numero di colonne atteso
-        - expectedTab   : tabella modificata attesa
+    def do_test(self, tabella, column, expected, expectedTab):
+        """Test implementation
+        - table       : table in the form of a list of dictionaries
+        - column       : table column name
+        - expected      : expected number of columns
+        - expectedTab   : modified waiting table
         """
         with self.ignored_function("builtins.print"), self.forbidden_function(
             "os.walk"
         ), self.timer(2):
-            result = program.es26(tabella, colonna)
+            result = program.es26(table, column)
         self.assertEqual(
-            result, expected, f"Il risultato deve essere {expected} invece che {result}"
+            result, expected, f "The result must be {expected} instead of {result}"
         )
         self.assertEqual(
-            tabella,
+            table,
             expectedTab,
-            f"Il risultato deve essere {expectedTab} invece che {tabella}",
+            f "The result must be {expectedTab} instead of {table}",
         )
 
     @data(
@@ -64,10 +64,10 @@ class Test(testlib.TestCase):
         ),
     )
     @unpack
-    def test(self, tabella, colonna, expected, expectedTab):
-        return self.do_test(tabella, colonna, expected, expectedTab)
+    def test(self, tabella, column, expected, expectedTab):
+        return self.do_test(table, column, expected, expectedTab)
 
 
-# I TEST VENGONO ESEGUITI SIA ESEGUENDO program.py che chiamando pytest nella directory
+# TESTS ARE PERFORMED BOTH BY RUNNING program.py and by calling pytest in the directory
 if __name__ == "__main__":
     Test.main()

@@ -27,20 +27,20 @@ class Timer:
 class TestCase(unittest.TestCase):
     def _raise_forbidden(self, forbidden):
         # lancia una eccezione
-        raise ForbiddenError(f"E' proibito usare la funzione/metodo {forbidden}")
+        raise ForbiddenError(f "It is forbidden to use the function / method {forbidden}")
 
     def forbidden_function(self, target="builtins.print"):
-        # torna un contesto che fa proibire l'uso della funzione target: per default 'builtins.print'
+        #returns a context that prohibits the use of the target function: by default 'builtins.print'
         return unittest.mock.patch(
             target, new=lambda *x, **y: self._raise_forbidden(target)
         )
 
     def ignored_function(self, target="builtins.print"):
-        # torna un contesto che fa ignorare la funzione target: per default 'builtins.print'
+        # returns a context that causes the target function to be ignored: by default 'builtins.print
         return unittest.mock.patch(target, new=lambda *x, **y: None)
 
     def timer(self, sec):
-        """torna un contesto di cui viene misurato il tempo di esecuzione e se necessario lanciata una eccezione per timeout"""
+        """returns a context whose execution time is measured and if necessary an exception for timeout is thrown"""
         return Timer(sec)
 
     def check(self, value, expected, params=None, explanation=""):
@@ -60,27 +60,27 @@ class TestCase(unittest.TestCase):
             txt_b = f.read()
         lines_a = [l.strip() for l in txt_a.splitlines()]
         lines_b = [l.strip() for l in txt_b.splitlines()]
-        # todo: usare una diff
+        # todo: use a diff
         msg = "text differ: " + a + " " + b
         self.assertEqual(lines_a, lines_b, msg)
 
     def __image_load(self, filename):
-        """Carica l'immagine in formato PNG dal file
-        filename, la converte nel formato a matrice
-        di tuple e la ritorna"""
+        """Upload the image in PNG format from the file 
+        filename, converts it to the matrix format 
+        of tuples and returns it"""
         import png
 
         with open(filename, "rb") as f:
-            # legge l'immagine come RGB a 256 valori
+            # reads the image as RGB with 256 values
             r = png.Reader(file=f)
             iw, ih, png_img, _ = r.asRGB8()
-            # converte in lista di liste di tuple
+            # convert to list of tuple lists
             img = []
             for png_row in png_img:
                 row = []
-                # l'immagine PNG ha i colori in
-                # un'unico array quindi li leggiamo
-                # tre alla volta in una tupla
+                # the PNG image has the colors in 
+                # a single array so we read them 
+                # three at a time in a tuple
                 for i in range(0, len(png_row), 3):
                     row.append((png_row[i + 0], png_row[i + 1], png_row[i + 2]))
                 img.append(row)
@@ -103,7 +103,7 @@ class TestCase(unittest.TestCase):
                 )
                 self.assertEqual(ca, cb, msg)
 
-    def check_json_file(self, a, b, msg="I due file JSON contengono strutture diverse"):
+    def check_json_file(self, a, b, msg="The two JSON files contain different structures"):
         import json
 
         with open(a, "r", encoding="utf8") as f1:

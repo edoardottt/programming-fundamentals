@@ -1,34 +1,33 @@
 """ 
-    Un modo comune di memorizzare tabelle e' come liste di dizionari. 
-    Ogni riga della tabella corrisponde ad un dizionario le cui chiavi sono i nomi delle colonne della tabella.
-    Questa collezione di dizionari e' poi memorizzata in una lista.
-    Ad esempio la tabella
+    A common way of storing tables is as dictionary lists. 
+    Each row of the table corresponds to a dictionary whose keys are the names of the columns of the table. 
+    This collection of dictionaries is then stored in a list. 5 For example the table
     
-    nome  | anno | tel
+    name  | year | tel
   --------|------|---------
    Sofia  | 1973 | 5553546 
    Bruno  | 1981 | 5558432
 
-puo' essere memorizzata come 
-[{'nome': 'Sofia', 'anno': 1973 ,'tel': 5553546},{'nome': 'Bruno', 'anno': 1981 ,'tel': 5558432}]
+can be stored as
+[{'name': 'Sofia', 'year': 1973 ,'tel': 5553546},{'name': 'Bruno', 'year': 1981 ,'tel': 5558432}]
 
 """
 
 
-def es26(tabella, colonna):
+def es26(table, column):
     """
-    Si implementi la funzione es26(tabella,colonna) che presi in input
-    - una tabella rappresentata tramite lista di dizionari
-    - una stringa con il nome di una delle colonne della tabella
-    modifica distruttivamente la tabella riordinandone le righe in ordine decrescente rispetto
-    ai valori contenuti nella  colonna indicata. La funzione deve restituire il numero di colonne della tabella.
-        Ad esempio con  tabella = [{'nome': 'Bruno', 'anno': 1981 ,'tel': 5558432},
-                        {'nome': 'Sofia', 'anno': 1973 ,'tel': 5553546}]
-    al termine di es26(dati, 'anno')  la  tabella sara' stata modificata in
-    [{'nome': 'Bruno', 'anno': 1981 ,'tel': 5558432},{'nome': 'Sofia', 'anno': 1973 ,'tel': 5553546}]
-    e restituisce il numero di colonne 3.
+    Implement the function es26 (table, column) that I took as input 
+    - a table represented by a list of dictionaries 
+    - a string with the name of one of the columns of the table 
+    destructively modifies the table by reordering its rows in descending order 
+    to the values ​​contained in the indicated column. The function must return the number of columns in the table.
+       For example with table = [{'name': 'Bruno', 'year': 1981 ,'tel': 5558432},
+                        {'name': 'Sofia', 'year': 1973 ,'tel': 5553546}]
+    at the end of es26(dati, 'anno')  the table will have been changed to
+    [{'name': 'Bruno', 'year': 1981 ,'tel': 5558432},{'name': 'Sofia', 'year': 1973 ,'tel': 5553546}]
+    and returns the number of columns 3.
     """
-    tabe = sorted(tabella, reverse=True, key=lambda x: x[colonna])
-    tabella.clear()
-    tabella.extend(tabe)
-    return len(tabella[0])
+    tabe = sorted(table, reverse=True, key=lambda x: x[column])
+    table.clear()
+    table.extend(tabe)
+    return len(table[0])

@@ -44,7 +44,7 @@ Copyright (C) 2019- Andrea Sterbini <sterbini@di.uniroma1.it>,
                     Matteo Neri <matteo2794@outlook.com>
 ~~~                    
 
-All programs and files contained in that directory([THIS](https://q2a.di.uniroma1.it/assets/eserciziario-python/script/)) are released under [GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.en.html)
+All programs and files contained in that directory (https://q2a.di.uniroma1.it/assets/eserciziario-python/script/) are released under [GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 
 --------

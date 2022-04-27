@@ -37,7 +37,7 @@ Download 📡
 Disclaimer⚠️
 --------
 
-**Copyright of the WorkBook** [Here the reference to official website](https://q2a.di.uniroma1.it/assets/eserciziario-python/script/)
+**Copyright of the WorkBook** [Here the reference to official website](https://q2a.di.uniroma1.it/)
 ~~~
 Copyright (C) 2019- Andrea Sterbini <sterbini@di.uniroma1.it>, 
                     Angelo Monti <monti@di.uniroma1.it>, 

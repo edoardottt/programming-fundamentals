@@ -7,10 +7,6 @@
 
 
 
-<p align="center">
-  <img src="https://github.com/edoardottt/programming-fundamentals/blob/master/Images/1.png">
-</p>
-
 Exercises performed during the course 'Programming Fundamentals' held by Prof. Sterbini, Prof. Monti and Prof. Spognardi at  University La Sapienza of Rome.
 
 **The course concerned about:**

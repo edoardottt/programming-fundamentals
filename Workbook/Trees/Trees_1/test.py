@@ -37,34 +37,8 @@ class Test(testlib.TestCase):
         )
 
     @data(
-        (
-            [
-                7,
-                [
-                    1,
-                    [4, [5, [9, None, None], None], None],
-                    [6, [2, None, [8, None, None]], None],
-                ],
-                [3, None, None],
-            ],
-            2,
-        ),
-        (
-            [
-                9,
-                [
-                    2,
-                    [6, [5, None, None], [5, None, None]],
-                    [6, [5, None, None], [5, None, None]],
-                ],
-                [
-                    4,
-                    [6, [5, None, None], [5, None, None]],
-                    [6, [5, None, None], [5, None, None]],
-                ],
-            ],
-            7,
-        ),
+        ([7,[1,[4, [5, [9, None, None], None], None],[6, [2, None, [8, None, None]], None],],[3, None, None],],2,),
+        ([9,[2,[6, [5, None, None], [5, None, None]],[6, [5, None, None], [5, None, None]],],[4,[6, [5, None, None], [5, None, None]],[6, [5, None, None], [5, None, None]],],],7,),
         ([5, None, [1, [5, None, [1, [5, None, None], None]], None]], 0),
     )
     @unpack

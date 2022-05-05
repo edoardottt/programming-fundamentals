@@ -2,7 +2,7 @@
 
 Navigate in each exercise folder to understand what you should do.
 
-**Note that**: you could need some python libraries inside the [utils folder](https://github.com/edoardottt/programming-fundamentals/tree/master/Workbook/utils) to run programs or tests. Be sure to copy those files inside the exercise folder. 
+**Note that**: you could need some python libraries inside the [utils folder](https://github.com/edoardottt/programming-fundamentals/tree/master/utils) to run programs or tests. Be sure to copy those files inside the exercise folder. 
 
 Disclaimer⚠️
 --------

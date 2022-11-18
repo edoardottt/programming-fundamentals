@@ -22,11 +22,15 @@ def load(fname):
         return img
 
 
+def flatten(line):
+    return [v for tuple in line for v in tuple]
+
+
 def save(img, filename):
     """Salva la immagine img  nel file filename in formato PNG8.
     Img e' una lista di liste di pixel.
     Ogni pixel è una tupla (R, G, B) dei 3 colori.
     Ciascun colore è un intero tra 0 e 255 compresi.
     """
-    pngimg = png.from_array(img, "RGB")
+    pngimg = png.from_array([flatten(line) for line in img], "RGB")
     pngimg.save(filename)

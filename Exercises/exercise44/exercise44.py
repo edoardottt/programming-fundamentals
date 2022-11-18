@@ -24,6 +24,10 @@ def grey(imm):
     return imm
 
 
+def to_int(Y):
+    return int(Y * 255)
+
+
 def grey_scale(t):
     r, g, b = t[0], t[1], t[2]
     if r != 0:
@@ -32,19 +36,18 @@ def grey_scale(t):
         g = g / 255
     if b != 0:
         b = b / 255
-    Cr, Cg, Cb = 0, 0, 0
     if r < 0.04045:
         Cr = r / 12.92
     else:
-        ((r + 0.055) / 1.055) ** 2.4
+        Cr = ((r + 0.055) / 1.055) ** 2.4
     if g < 0.04045:
         Cg = g / 12.92
     else:
-        ((g + 0.055) / 1.055) ** 2.4
+        Cg = ((g + 0.055) / 1.055) ** 2.4
     if b < 0.04045:
         Cb = b / 12.92
     else:
-        ((b + 0.055) / 1.055) ** 2.4
+        Cb = ((b + 0.055) / 1.055) ** 2.4
     Ylinear = 0.2126 * Cr + 0.7152 * Cg + 0.0722 * Cb
     if Ylinear <= 0.0031308:
         Yr, Yg, Yb = Ylinear * 12.92, Ylinear * 12.92, Ylinear * 12.92
@@ -54,7 +57,7 @@ def grey_scale(t):
             1.055 * (Ylinear) ** (1 / 2.4) - 0.055,
             1.055 * (Ylinear) ** (1 / 2.4) - 0.055,
         )
-    return Yr, Yg, Yb
+    return to_int(Yr), to_int(Yg), to_int(Yb)
 
 
 tigre = immagini.load("tigre.png")

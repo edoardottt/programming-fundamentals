@@ -6,7 +6,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f34580339dbb4cf7ab0daa85b6c98009)](https://www.codacy.com/manual/edoardottt/programming-fundamentals?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=edoardottt/programming-fundamentals&amp;utm_campaign=Badge_Grade)
 
 
-Exercises performed during the course 'Programming Fundamentals' held by Prof. Sterbini, Prof. Monti and Prof. Spognardi at  University La Sapienza of Rome.
+Exercises performed during the course 'Programming Fundamentals' held by Prof. Sterbini, Prof. Monti and Prof. Spognardi at Sapienza University of Rome.
 
 **Note that**: you could need some python libraries inside the [utils folder](https://github.com/edoardottt/programming-fundamentals/tree/master/utils) to run programs or tests. Be sure to copy those files inside the exercise folder. 
 

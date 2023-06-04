@@ -28,7 +28,9 @@ Exercises performed during the course *'Programming Fundamentals'* held by Prof.
 Download 📡
 --------
 
-- `git clone https://github.com/edoardottt/programming-fundamentals.git`
+```console
+git clone https://github.com/edoardottt/programming-fundamentals.git
+```
 
 Disclaimer⚠️
 --------

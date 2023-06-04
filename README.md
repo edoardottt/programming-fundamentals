@@ -9,7 +9,7 @@ Exercises performed during the course *'Programming Fundamentals'* held by Prof.
 > **Note**
 > You need some python libraries inside the [utils folder](https://github.com/edoardottt/programming-fundamentals/tree/master/utils) to run programs or tests. Be sure to copy those files inside the exercise folder.
 
-**The course concerned about:**
+**Course syllabus:**
 
 - Introduction to programming using the Python language
 - Data types

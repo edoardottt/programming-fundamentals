@@ -51,4 +51,4 @@ If you spot an error just open an [issue](https://github.com/edoardottt/programm
 
 --------
 
-[edoardoottavianelli.it](https://www.edoardoottavianelli.it) for contact me.
+[edoardottt.com](https://edoardottt.com/) to contact me.
